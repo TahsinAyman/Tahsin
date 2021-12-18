@@ -4,9 +4,9 @@ public class App {
 	
  	public static void main(String[] args) {
  		System.out.println("O");
- 		main();
+ 		new App().main();
 	}
- 	public static void main() {
+ 	public void main() {
  		System.out.println("My Main");
  	}
 }

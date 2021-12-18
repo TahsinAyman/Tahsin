@@ -1,3 +1,5 @@
-lst = [1, 2, 3]
-print(lst.pop())
-print(lst)
+import re
+
+m = re.search(r'\d+', '1234')
+print(m.start())
+print(m.end())

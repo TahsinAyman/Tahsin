@@ -1,30 +1,17 @@
 package lib.vendorexam;
 
-
-import java.nio.channels.ScatteringByteChannel;
 import java.util.ArrayList;
 import java.util.List;
 
 public class VendorExam {
+
     public static void main(String[] args) {
+        Student [] students = new Student[3];
+        students[0] = new Student("Tah", 12);
+        students[1] = new Student("AAA", 19);
 
-        String [] names = {"Thomas", "Peter", "Joseph"};
-        String [] opt = new String[3];
-        int i = 0;
-        try {
-            for (String n :
-                    names) {
-                opt[i] = n.substring(2, 6);
-                i++;
-            }
-        }catch(Exception e){
-            opt[i] = "Invalid";
+        for (Student student: students          ) {
+            System.out.println(""+ student.name);
         }
-
-        for (String s :
-                opt) {
-            System.out.println(s);
-        }
-
     }
 }
