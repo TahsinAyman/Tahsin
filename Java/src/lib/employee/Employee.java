@@ -7,10 +7,17 @@ public class Employee extends Human {
     private int salary;
     private int bonus;
     private String work;
-    
+
+    /***
+     * An empty Constructor
+     */
     public Employee() {
         
     }
+
+    /***
+     * A non empty Constructor
+     */
     public Employee(String name, String religion, int age, double height, double weight, String gender, int id,
             int salary, int bonus, String work) {
         super(name, religion, age, height, weight, gender);
@@ -19,6 +26,10 @@ public class Employee extends Human {
         this.bonus = bonus;
         this.work = work;
     }
+
+    /***
+     * Getter of 'getBonus'
+     */
     public int getBonus() {
         return bonus;
     }

@@ -8,7 +8,12 @@ public class Calculator {
 	double var2;
 
 	Scanner input = new Scanner(System.in);
-	
+
+	/***
+	 * Md Rashed Karim
+	 * This is add method
+	 * @return sum
+	 */
 	public double Add() {
 		
 		double var1;
@@ -32,7 +37,11 @@ public class Calculator {
 			
 		return sum;
 	}
-	
+
+	/***
+	 * Tahsin
+	 * @return sum
+	 */
 	public double Sub() {
 		
 		double var1;

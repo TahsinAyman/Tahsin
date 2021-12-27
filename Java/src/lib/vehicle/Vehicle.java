@@ -7,12 +7,8 @@ public class Vehicle {
     private int toSpeed;
     private int wheelThiknessCM;
     private String name;
-
     
-    
-    public Vehicle() {
-
-	}
+    public Vehicle() {	}
 	public Vehicle(String name) {
 		this.name = name;
 	}
