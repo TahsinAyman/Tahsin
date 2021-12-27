@@ -1,4 +1,4 @@
-package lib.kacker_rank;
+package lib.hacker_rank;
 
 import java.util.Scanner;
 

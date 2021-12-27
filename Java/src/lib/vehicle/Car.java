@@ -13,10 +13,10 @@ public class Car extends Vehicle {
 		this.trans = trans;
 	}
 
-
 	@Override
-    public String toString() {
-        return super.toString();
-    }
-    
+	public String toString() {
+		return "Car{" +
+				"trans='" + trans + '\'' +
+				'}';
+	}
 }

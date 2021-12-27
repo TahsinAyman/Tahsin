@@ -1,4 +1,2 @@
-s = set(['T', 'a', 'h', 's', 'i', 'n'])
-b = set()
-s.union('Ayman')
-print(s)
+lst = [1, 2, 3]
+print(len(lst))

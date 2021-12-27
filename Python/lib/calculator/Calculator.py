@@ -1,9 +1,9 @@
-from addition import add
-from subtraction import sub
-from multiiplication import multi
-from division import div
 from msvcrt import getch
 from os import system
+from lib.calculator.addition import add
+from lib.calculator.subtraction import sub
+from lib.calculator.multiiplication import multi
+from lib.calculator.division import div
 
 
 def Calculator():
@@ -25,7 +25,7 @@ def Calculator():
         elif choice == 2:
             lst_sub = [float(inp_sub) for inp_sub in input('Enter Number: ').split(' - ')]
             print('')
-            sub(lst_sub)
+            print(sub(lst_sub))
             getch()
         elif choice == 3:
             lst_multi = [float(inp_multi) for inp_multi in input('Enter Number: ').split(' x ')]
@@ -35,7 +35,7 @@ def Calculator():
         elif choice == 4:
             lst_div = [float(inp_div) for inp_div in input('Enter Number: ').split(' / ')]
             print('')
-            div(lst_div)
+            print(div(lst_div))
             getch()
         elif choice == 0:
             print('Thank you')

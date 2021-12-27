@@ -1,6 +1,8 @@
 def div(lst):
-    sum = float(0)
-    for i in lst:
-        sum /= i
-    print('>: = ', '{0:.2f}'.format(sum))
-
+    result = float()
+    for integer in lst:
+        if integer == lst[0]:
+            result = integer
+        else:
+            result = result / integer
+    return '>: = {0:.2f}'.format(result)
