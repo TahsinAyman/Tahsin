@@ -1,13 +1,9 @@
-# Assignment in two ways
-# First Way:
+n = int(input('Enter Stair Value: '))
 
-# The Way you teach (:
+for i in range(n):
+    for y in range(i, n-1):
+        print('  ', end='')
 
-# Start
-
-n = int(input('Enter the Value of stairs: '))
-
-for row in range(1, n + 1):
-    print('* ' * row)
-
-# End
+    for z in range(i + 1):
+        print('* ', end='')
+    print('')
