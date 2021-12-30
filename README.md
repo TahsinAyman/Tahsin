@@ -5,13 +5,13 @@ https://tahsin-ayman.000webhostapp.com/
 There is so many programming language in this repository.
 and they are:
 
-  -Java
+  - Java
 
-  -Python
+  - Python
 
-  -C
+  - C
 
-  -C++
+  - C++
 
 Tahsin Ayman is the creator of this repository
 
