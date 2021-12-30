@@ -94,7 +94,6 @@ def box(n):
 
 
 def main():
-    global n
     while True:
         print('')
         print('0. Exit                   5. Pyramid')
