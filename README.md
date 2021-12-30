@@ -6,12 +6,14 @@ There is so many programming language in this repository.
 and they are:
 
   - Java
-
   - Python
-
   - C
-
   - C++
+  - HTML
+  - Java Script
+  - CSS
+  - Batch File
+  - Other
 
 Tahsin Ayman is the creator of this repository
 
