@@ -16,10 +16,8 @@ Tahsin Ayman is the creator of this repository
 
 Anyone can easly download the zip of this Repository
 and don't have to know any command
-
 they ust have to run Update.bat file to Update their files
 and use Pulling.bat to get other changed files
-
 Warning: Do not delete anything without host's permission
 
 Written by Host- Tahsin Ayman
