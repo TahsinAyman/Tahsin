@@ -7,7 +7,7 @@ from lib.calculator.division import div
 
 
 def Calculator():
-    while 1:
+    while True:
         system('cls')
         print('0. Exit')
         print('1. Addition')
