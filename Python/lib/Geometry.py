@@ -86,7 +86,6 @@ def box(n):
             print('  ', end='')
         print(' ║', end='')
         print()
-
     print('╚', end=' ')
     for bottom in range(1, (n // 2) + 2):
         print('═', end=' ')
@@ -107,37 +106,35 @@ def main():
 
         if choice == '0':
             break
+        elif choice == '1' or choice == 'left side stair':
+            n = int(input('Enter the Value: '))
+            left_side_stair(n)
+        elif choice == '2' or choice == 'right side stair':
+            n = int(input('Enter the Value: '))
+            right_side_stair(n)
+        elif choice == '3' or choice == 'upside right stairs':
+            n = int(input('Enter the Value: '))
+            upside_right_stairs(n)
+        elif choice == '4' or choice == 'upside left stairs':
+            n = int(input('Enter the Value: '))
+            upside_left_stairs(n)
+        elif choice == '5' or choice == 'pyramid':
+            n = int(input('Enter the Value: '))
+            pyramid(n)
+        elif choice == '6' or choice == 'upside pyramid':
+            n = int(input('Enter the Value: '))
+            upside_pyramid(n)
+        elif choice == '7' or choice == 'basic box':
+            n = int(input('Enter the Value: '))
+            basic_box(n)
+        elif choice == '8' or choice == 'box':
+            n = int(input('Enter the Value: '))
+            box(n)
+        elif choice == '9' or choice == 'diamond':
+            n = int(input('Enter the Value: '))
+            diamond(n)
         else:
-
-            if choice == '1' or choice == 'left side stair':
-                n = int(input('Enter the Value: '))
-                left_side_stair(n)
-            elif choice == '2' or choice == 'right side stair':
-                n = int(input('Enter the Value: '))
-                right_side_stair(n)
-            elif choice == '3' or choice == 'upside right stairs':
-                n = int(input('Enter the Value: '))
-                upside_right_stairs(n)
-            elif choice == '4' or choice == 'upside left stairs':
-                n = int(input('Enter the Value: '))
-                upside_left_stairs(n)
-            elif choice == '5' or choice == 'pyramid':
-                n = int(input('Enter the Value: '))
-                pyramid(n)
-            elif choice == '6' or choice == 'upside pyramid':
-                n = int(input('Enter the Value: '))
-                upside_pyramid(n)
-            elif choice == '7' or choice == 'basic box':
-                n = int(input('Enter the Value: '))
-                basic_box(n)
-            elif choice == '8' or choice == 'box':
-                n = int(input('Enter the Value: '))
-                box(n)
-            elif choice == '9' or choice == 'diamond':
-                n = int(input('Enter the Value: '))
-                diamond(n)
-            else:
-                print('Wrong Choice')
+            print('Wrong Choice')
 
     for ch in 'Thank You':
         print(ch, end='')
