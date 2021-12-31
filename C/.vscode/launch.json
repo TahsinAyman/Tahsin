@@ -2,7 +2,7 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
+    "version": "6.3.0",
     "configurations": [
         {
             "name": "gcc.exe - Build and debug active file",
@@ -13,9 +13,9 @@
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "F:\\CodeBlocks\\MinGW\\bin\\gdb.exe",
+            "miDebuggerPath": "F:\\MinGw\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
