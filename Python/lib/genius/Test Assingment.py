@@ -1,37 +1,47 @@
-# x = 7
-# for i in range(1, x):
-#     for ex in range(i, x):
-#         print(ex, end=" ")
-#
-#     for ex in range(i):
+'''
+n = 3
+  0
+ 123
+45678
+ 901
+  2
+
+n = 4
+   0
+  123
+ 45678
+9012345
+ 67890
+  123
+   4
+
+n = 3
+*****
+ ***
+  *
+n = 4
+*******
+ *****
+  ***
+   *
+'''
+# x = int(input(" enter some int ."))
+# for row in range(x):
+#     for i in range(row, x - 1):
+#         print(" ", end=" ")
+#     for i in range(row + 1):
 #         print("*", end=" ")
-#
-#     for ex in range(i-1):
-#         print("*", end=" ")
-#     print()
-# for i in range(x):
-#     for ex in range(i):
-#         print(ex, end=" ")
-#
-#     for ex in range(i, x):
-#         print("*", end=" ")
-#
-#     for ex in range(i, x -1):
-#         print("*", end=" ")
-#     print()
+#     print('* ' * row)
+
+# n = 7  # int(input('Enter value of Pyramid: '))
+# for i in range(n):
+#     print('  ' * (n - i - 1) + '* ' * (i * 2 + 1))
 
 
-mid = 3
-midEnd = midStart = mid
-for row in range(1, mid * 2):
-    if row <= mid:
-        midEnd -= 1
-        midStart += 1
-    else:
-        midEnd += 1
-        midStart -= 1
+lst = [int(l) for l in input('Enter Numbers: ').split()]
+print(lst)
+sum = 0
+for i in lst:
+    sum += i
+print('Result = ', sum)
 
-    for col in range(mid * 2):
-        print("*" if (midEnd < col < midStart) else " ", end=" ")
-
-    print()

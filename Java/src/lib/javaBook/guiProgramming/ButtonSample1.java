@@ -12,10 +12,7 @@ public class ButtonSample1 implements ActionListener {
         frame.setVisible(true);
         frame.setLayout(new FlowLayout());
 
-        ImageIcon image = new ImageIcon("src\\lib\\javaBook\\guiProgramming\\Tahsin.jpg");
-
-        JButton button = new JButton(image);
-        button.setActionCommand("Epic");
+        JButton button = new JButton();
         button.setBounds(50, 50, 300, 300);
         button.addActionListener(this);
         frame.add(button);
