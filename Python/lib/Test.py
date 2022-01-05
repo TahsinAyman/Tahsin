@@ -1,1 +1,1 @@
-print("lol")
+print('Ishaan is noob')
