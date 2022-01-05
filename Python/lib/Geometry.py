@@ -51,11 +51,7 @@ def right_side_stair(n):
 
 def pyramid(n):
     for i in range(n):
-        for y in range(n - 1, i, -1):
-            print('  ', end='')
-        for z in range(i * 2 + 1):
-            print('*', end=' ')
-        print()
+        print('  ' * (n - i - 1) + '* ' * (i * 2 + 1))
 
 
 def diamond(n):
@@ -63,14 +59,14 @@ def diamond(n):
         for y in range(n - 1, i, -1):
             print('  ', end='')
         for z in range(i * 2 + 1):
-            print('*', end=' ')
+            print(z, end=' ')
         print()
 
     for i in range(n - 1, 0, -1):
         for y in range(i, n):
             print('  ', end='')
         for z in range(i * 2 - 1, 0, -1):
-            print('*', end=' ')
+            print(z, end=' ')
         print()
 
 
