@@ -158,6 +158,7 @@ def main():
             n = int(input('Enter the Value: '))
             diamond(n)
         elif choice == '10' or choice == 'numeric diamond':
+            n = int(input('Enter the Value: '))
             numeric_diamond(n)
         else:
             print('Wrong Choice')
