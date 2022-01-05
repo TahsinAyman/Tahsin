@@ -1,18 +1,12 @@
-n = int(input('Enter the size of Box: '))
+n = int(input('Enter the Size of Box: '))
 
 print('╔', end=' ')
-for top in range(1, (n // 2) + 2):
-    print('═', end=' ')
+print('═ ' * ((n // 2) + 1), end='')
 print('╗')
-
-for row in range(1, (n // 2) + 2):
-    print('║', end='')
-    for col in range(1, (n // 2) + 2):
-        print('  ', end='')
-    print(' ║', end='')
-    print()
-
+for row in range((n // 2) + 1):
+    print('║', end=' ')
+    print('  ' * ((n // 2) + 1), end='')
+    print('║')
 print('╚', end=' ')
-for bottom in range(1, (n // 2) + 2):
-    print('═', end=' ')
-print('╝', end=' ')
+print('═ ' * ((n // 2) + 1), end='')
+print('╝', end='')
