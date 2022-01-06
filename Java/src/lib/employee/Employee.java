@@ -7,6 +7,7 @@ public class Employee extends Human {
     private int salary;
     private int bonus;
     private String work;
+    public double aDouble;
 
     /***
      * An empty Constructor

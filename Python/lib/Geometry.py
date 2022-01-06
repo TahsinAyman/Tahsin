@@ -41,12 +41,10 @@ def left_side_stair(n):
 
 
 def right_side_stair(n):
-    for i in range(n):
-        for y in range(n - 1, i, -1):
+    for i in range(1, n + 1):
+        for y in range(i, n):
             print('  ', end='')
-        for z in range(i + 1):
-            print('*', end=' ')
-        print()
+        print('* ' * i)
 
 
 def pyramid(n):
@@ -70,6 +68,31 @@ def diamond(n):
         print()
 
 
+def numeric_diamond(n):
+    cnt = -1
+
+    for top in range(n):
+        for _ in range(n - 1, top, -1):
+            print('  ', end='')
+        for _ in range(top * 2 + 1):
+            cnt += 1
+            if cnt > 9:
+                cnt = 0
+            print(cnt, end=' ')
+        print()
+
+    for bottom in range(n - 1, 0, -1):
+        for _ in range(bottom, n):
+            print('  ', end='')
+        for _ in range(bottom * 2 - 1):
+            cnt += 1
+            if cnt > 9:
+                cnt = 0
+            print(cnt, end=' ')
+        if bottom != n - (n - 1):
+            print()
+
+
 def box(n):
     print('╔', end=' ')
     for top in range(1, (n // 2) + 2):
@@ -89,18 +112,19 @@ def box(n):
 
 
 def main():
+    global n
     while True:
         print('')
         print('0. Exit                   5. Pyramid')
         print('1. Left Side Stair        6. Upside Pyramid')
         print('2. Right Side Stair       7. Basic Box')
         print('3. Upside Right Stairs    8. Box')
-        print('4. Upside Left Stairs     9. Diamond\n')
+        print('4. Upside Left Stairs     9. Diamond | 10. Numeric Diamond\n')
 
         choice = input('Enter the choice: ')
         choice = choice.lower()
 
-        if choice == '0':
+        if choice == '0' or choice == 'exit':
             break
         elif choice == '1' or choice == 'left side stair':
             n = int(input('Enter the Value: '))
@@ -129,6 +153,9 @@ def main():
         elif choice == '9' or choice == 'diamond':
             n = int(input('Enter the Value: '))
             diamond(n)
+        elif choice == '10' or choice == 'numeric diamond':
+            n = int(input('Enter the Value: '))
+            numeric_diamond(n)
         else:
             print('Wrong Choice')
 

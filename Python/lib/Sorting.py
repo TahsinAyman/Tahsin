@@ -1,18 +1,29 @@
-def sort(lst):
-    tmp = []
-    max = -1
-    max2 = -1
-    for z in lst:
-        for i in lst:
-            if max < i:
-                max = i
-                lst.remove(i)
-                lst.insert(0, max)
-            else:
-                tmp.append(i)
-    print(max)
-    return lst
+def small_big_sort(lst):
+    result = []
+    for _ in range(len(lst)):
+        max = lst[0]
+        for i in range(len(lst)):
+            if lst[i] < max:
+                max = lst[i]
+        lst.remove(max)
+        result.append(max)
+    return result
+
+
+def big_small_sort(lst):
+    result = []
+    for _ in range(len(lst)):
+        min = lst[0]
+        for i in range(len(lst)):
+            if lst[i] > min:
+                min = lst[i]
+        lst.remove(min)
+        result.append(min)
+    return result
 
 
 lst = [int(l) for l in input().split()]
-print(sort(lst))
+lst = small_big_sort(lst)
+print(lst)
+lst = big_small_sort(lst)
+print(lst)
