@@ -1,33 +1,30 @@
-<<<<<<< HEAD
-def binary_search(lst, key):
-    index = int()
-    for i in range(len(lst)):
-        if lst[i] == key:
-            index = i + 1
-=======
-def search(lst, key):  # 1 2 3 4 5 key: 4
-    index = int()
-    l = lst
-    while True:
-        if l[len(lst) // 2] == key:
-            index = key
-            break
-        elif key > l[len(lst) // 2]:
-            for i in range(-1, len(l) // 2):
-                lst.remove(lst[i])
-        elif key < l[len(lst) // 2]:
-            for i in range(len(l), -1, -1):
-                lst.remove(lst[i])
->>>>>>> 036a78242a10c375b39e4d92ad54ccb4434ef6ad
-    return index
+def bubble_sort(lst):
+    cnt = 0
+    for _ in range(len(lst)):
+        cnt += 1
+        for i in range(len(lst) - cnt):
+            if lst[i] > lst[i + 1]:
+                tmp = lst[i]
+                lst[i] = lst[i + 1]
+                lst[i + 1] = tmp
+
+
+def search(lst, key):
+    low = 0
+    high = len(lst) - 1
+    while low <= high:
+        mid = low + (high - low) // 2
+        if lst[mid] == key:
+            return mid
+        elif key > lst[mid]:
+            low = mid + 1
+        elif key < lst[mid]:
+            high = mid - 1
+    return -1
 
 
 lst = [int(l) for l in input().split()]
+bubble_sort(lst)
+print(lst)
 key = int(input())
-<<<<<<< HEAD
-
-index = binary_search(lst, key)
-print(index)
-=======
 print(search(lst, key))
->>>>>>> 036a78242a10c375b39e4d92ad54ccb4434ef6ad

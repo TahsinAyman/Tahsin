@@ -7,6 +7,7 @@ def small_big_sort(lst):
                 max = lst[i]
         lst.remove(max)
         result.append(max)
+    del lst
     return result
 
 
@@ -19,6 +20,7 @@ def big_small_sort(lst):
                 min = lst[i]
         lst.remove(min)
         result.append(min)
+    del lst
     return result
 
 

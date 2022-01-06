@@ -1,9 +1,11 @@
 package root;
 
-import lib.javaBook.guiProgramming.Notepad;
-
 public class App {
     public static void main(String[] args){
-        new Notepad();
+        try {
+            System.out.print("Noob Code");
+        } catch (Exception e) {
+            System.out.println("Noob Exception");
+        }
     }
 }
