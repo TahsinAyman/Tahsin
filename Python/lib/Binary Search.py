@@ -1,12 +1,4 @@
-def bubble_sort(lst):
-    cnt = 0
-    for _ in range(len(lst)):
-        cnt += 1
-        for i in range(len(lst) - cnt):
-            if lst[i] > lst[i + 1]:
-                tmp = lst[i]
-                lst[i] = lst[i + 1]
-                lst[i + 1] = tmp
+from lib.BubbleSort import bubble_sort
 
 
 def search(lst, key):
@@ -20,7 +12,7 @@ def search(lst, key):
             low = mid + 1
         elif key < lst[mid]:
             high = mid - 1
-    return -1
+    return f"{key} not Found."
 
 
 lst = [int(l) for l in input().split()]

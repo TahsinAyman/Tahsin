@@ -9,6 +9,7 @@ def bubble_sort(lst):
                 lst[i + 1] = tmp
 
 
-lst = [int(l) for l in input().split()]
-bubble_sort(lst)
-print(lst)
+if __name__ == '__main__':
+    lst = [int(l) for l in input().split()]
+    bubble_sort(lst)
+    print(lst)
