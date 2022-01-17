@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BasicApp</string>
+    <string name="click_me">Click me</string>
+    <string name="tahsin_s_app">Tahsin\'s App</string>
+    <string name="calculate">Calculate</string>
+    <string name="enter_number">Enter Number</string>
+    <string name="name">Name</string>
+</resources>
