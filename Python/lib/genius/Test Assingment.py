@@ -1,47 +1,11 @@
-'''
-n = 3
-  0
- 123
-45678
- 901
-  2
-
-n = 4
-   0
-  123
- 45678
-9012345
- 67890
-  123
-   4
-
-n = 3
-*****
- ***
-  *
-n = 4
-*******
- *****
-  ***
-   *
-'''
-# x = int(input(" enter some int ."))
-# for row in range(x):
-#     for i in range(row, x - 1):
-#         print(" ", end=" ")
-#     for i in range(row + 1):
-#         print("*", end=" ")
-#     print('* ' * row)
-
-# n = 7  # int(input('Enter value of Pyramid: '))
-# for i in range(n):
-#     print('  ' * (n - i - 1) + '* ' * (i * 2 + 1))
-
-
-lst = [int(l) for l in input('Enter Numbers: ').split()]
-print(lst)
-sum = 0
-for i in lst:
-    sum += i
-print('Result = ', sum)
-
+number = [int(l) for l in input().split()]  # The First Line Input.
+n, m, number, id = number[0], number[1], [], []  # Defining Values.
+for i in range(number[0]):
+    number.append(int(input()))  # Number List Appending The Employee Number.
+for y in range(number[1]):
+    id.append(int(input()))  # ID List Appending The ID Number of Employee.
+for z in id:
+    if z > number[0] - 1:  # Checking if There is an IndexError Exception (An Error in to compile time).
+        print('No entry')  # Run if There is An Error.
+    else:  # if There is an Error Then:
+        print(number[z])  # Run if Index is Right.

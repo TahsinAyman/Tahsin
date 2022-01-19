@@ -1,10 +1,5 @@
-# Input
-n1 = int(input())
-n2 = int(input())
 lst = []
-for row in range(n1):
-    arr = [int(l) for l in input().split()]
-    lst.append(arr)
-del arr
+for row in range(int(input())):
+    lst.append([int(l) for l in input().split()])
 # Output
 print(lst)

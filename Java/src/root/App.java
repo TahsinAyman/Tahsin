@@ -2,25 +2,63 @@ package root;
 
 import lib.javaBook.collections.Book;
 
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        Set<Book> set = new TreeSet<Book>();
-        //Creating Books
-        Book b1 = new Book(121, "Let us C", "Yashwant Kanetkar", "BPB", 8);
-        Book b2 = new Book(233, "Operating System", "Galvin", "Wiley", 6);
-        Book b3 = new Book(101, "Data Communications & Networking", "Forouzan", "Mc Graw Hill", 4);
-        Book b4 = new Book(200, "Data Communications & Networking", "Forouzan", "Mc Graw Hill", 4);
-        //Adding Books to TreeSet
-        set.add(b1);
-        set.add(b2);
-        set.add(b4);
-        set.add(b3);
-        //Traversing TreeSet
-        for (Book b : set) {
-            System.out.println(b.id + " " + b.name + " " + b.author + " " + b.publisher + " " + b.quantity);
+        HashSet<String> hashSet = new HashSet<String>();
+
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 900000; i++) {
+            hashSet.add(String.valueOf(i));
         }
+
+        System.out.println("Insert HashSet Time: " + (System.currentTimeMillis() - start));
+
+
+        ArrayList<String> arrayList = new ArrayList<String>();
+
+        start = System.currentTimeMillis();
+
+        for (int i = 0; i < 900000; i++) {
+            arrayList.add(String.valueOf(i));
+        }
+        System.out.println("Insert ArrayList Time: " + (System.currentTimeMillis() - start));
+
+        LinkedList<String> linkedList = new LinkedList<String>();
+
+        start = System.currentTimeMillis();
+
+        for (int i = 0; i < 900000; i++) {
+            linkedList.add(String.valueOf(i));
+        }
+        System.out.println("Insert linkedList Time: " + (System.currentTimeMillis() - start));
+
+        TreeSet<String> treeSet = new TreeSet<String>();
+
+        start = System.currentTimeMillis();
+
+        for (int i = 0; i < 900000; i++) {
+            treeSet.add(String.valueOf(i));
+        }
+        System.out.println("Insert TreeSet Time: " + (System.currentTimeMillis() - start));
+
+        PriorityQueue<String> priorityQueue = new PriorityQueue<>();
+
+        start = System.currentTimeMillis();
+
+        for (int i = 0; i < 900000; i++) {
+            priorityQueue.add(String.valueOf(i));
+        }
+        System.out.println("Insert priorityQueue Time: " + (System.currentTimeMillis() - start));
+
+        HashMap hashMap = new HashMap();
+
+        start = System.currentTimeMillis();
+
+        for (int i = 0; i < 900000; i++) {
+            hashMap.put(String.valueOf(i), String.valueOf(i));
+        }
+        System.out.println("Insert hashMap Time: " + (System.currentTimeMillis() - start));
     }
 }

@@ -1,4 +1,4 @@
-from Task import add
+from Task import ishaan_code
 
 
 def test():
@@ -24,8 +24,11 @@ if __name__ == '__main__':
         i = i.split()
         for y in i:
             input_file.append(int(y))
-    for z in range(0, len(input_file) - 1, 2):
-        result = add(input_file[z], input_file[z + 1])
-        output.write(str(result) + "\n")
-    output.close()
-    test()
+    Range = [int(do) for do in input("").strip().split(" ")]
+    for i in range(Range[1]):
+        result = ishaan_code(Range, [])
+        print(result)
+    #
+    # output.write(str(ishaan_code()) + "\n")
+    # output.close()
+    # test()
