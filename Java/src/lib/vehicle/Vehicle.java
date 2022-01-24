@@ -8,7 +8,6 @@ public class Vehicle {
     private int wheelThiknessCM;
     private String name;
     
-    public Vehicle() {	}
 	public Vehicle(String name) {
 		this.name = name;
 	}

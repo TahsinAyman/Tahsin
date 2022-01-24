@@ -1,8 +1,6 @@
 #include<stdio.h>
 
 int main() {
-	FILE *fptr = fopen("file.txt");
-	char [] ishaan = "Ishaan";
-
-	
+	printf("%c", 7);	
 	return 0;
+}
