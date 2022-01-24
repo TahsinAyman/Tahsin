@@ -1,9 +1,5 @@
 def multi(lst):
-    sum = float()
-    for i in lst:
-        if i == lst[0]:
-            sum = i
-        else:
-            sum = sum * i
+    sum = float(lst[0])
+    for i in range(1, len(lst)):
+        sum = sum * lst[i]
     print('>: = ', '{0:.2f}'.format(sum))
-

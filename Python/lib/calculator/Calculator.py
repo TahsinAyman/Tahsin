@@ -1,9 +1,9 @@
 from msvcrt import getch
 from os import system
-from lib.calculator.addition import add
-from lib.calculator.subtraction import sub
-from lib.calculator.multiiplication import multi
-from lib.calculator.division import div
+from addition import add
+from subtraction import sub
+from multiiplication import multi
+from division import div
 
 
 def Calculator():

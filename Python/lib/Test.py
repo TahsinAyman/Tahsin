@@ -1,4 +1,4 @@
-print('Tahsin Ayman is my name')
-n = int(input())
+import lib.ListInput
 
-print(n)
+lst = [1, 2, 3, 4, 'yes']
+print(lst.index('yes'))
