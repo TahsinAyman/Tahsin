@@ -28,6 +28,7 @@ void Startup() {
 		printf("3. type \"HTML\" for doing Java programming\n");
 		printf("4. type \"Java\" for doing Java programming\n");
 		printf("5. type \"Python\" for doing Python programming\n");
+		printf("5. type \"Django\" for doing Django programming\n");
 		printf("6. type \"Update\" for Updateing the Workspace\n");
 		printf("7. type \"Pulling\" for Pulling the changes of the workspace\n\n");
 
@@ -64,6 +65,9 @@ void Startup() {
 		}
 		else if (strcmp(c, "Exit") == 0) {
 			exit(0);
+		}
+		else if (strcmp(c, "Django") == 0) {
+			system("code DJango\\");
 		}
 		else
 		{
