@@ -1,4 +1,4 @@
-package com.tahsin.basicapp;
+package com.tahsin.app;
 
 import org.junit.Test;
 

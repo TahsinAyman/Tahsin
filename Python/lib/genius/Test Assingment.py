@@ -1,27 +1,35 @@
-n, sum = int(input()), []
-lst1 = [int(_) for _ in input().strip().split()]
-lst2 = [int(_) for _ in input().strip().split()]
-for i in range(n):
-    sum.append(lst1[i] + lst2[i])
-for i in sum:
-    print(i, end=' ')
+tom = [int(_) for _ in input().strip().split()]
+jerry = [int(_) for _ in input().strip().split()]
 
-'''
-5 5
-1024
-2048
-7789
-4321
-42
-0 2
-0 7
-0 3
-1 3 1131
-0 3
+tom_sum = tom[0] + tom[1]
+jerry_sum = jerry[0] + jerry[1]
 
-6
-1 2 3 4 5 6
-9 5 4 1 6 6
+if tom_sum > jerry_sum:
+    print('Tom')
+elif jerry_sum > tom_sum:
+    print('Jerry')
+else:
+    if tom[0] == tom[1] and jerry[0] != jerry[1]:
+        print('Tom')
+    elif jerry[0] == jerry[1] and tom[0] != tom[1]:
+        print('Jerry')
+    else:
+        print('It is a Tie!')
 
-10 7 7 5 11
-'''
+# if tom[0] == tom[1] and jerry[0] != jerry[1] or tom_sum > jerry_sum:
+#     print('Tom')
+# elif jerry[0] == jerry[1] and tom[0] != tom[1] or jerry_sum > tom_sum:
+#     print('Jerry')
+# else:
+#     print('It is a Tie!')
+
+# if tom_sum > jerry_sum:
+#     print('Tom')
+# elif tom_sum < jerry_sum:
+#     print('Jerry')
+# else:
+#     if tom[0] == tom[1] and jerry[0] != jerry[1]:
+#         print('Tom')
+#     else:
+#
+#     print("It's a tie")

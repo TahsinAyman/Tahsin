@@ -1,4 +1,4 @@
-from Task import ishaan_code
+import subprocess
 
 
 def test():
@@ -15,20 +15,18 @@ def test():
             print(f"Test Case {i + 1} Failed")
 
 
-if __name__ == '__main__':
+def run():
     file = open('inputFile.txt').readlines()
     output = open('ActualOutput.txt', 'w')
     input_file = []
     for i in file:
-        i = i.strip()
-        i = i.split()
+        i = i.strip().split()
         for y in i:
             input_file.append(int(y))
-    Range = [int(do) for do in input("").strip().split(" ")]
-    for i in range(Range[1]):
-        result = ishaan_code(Range, [])
-        print(result)
-    #
-    # output.write(str(ishaan_code()) + "\n")
-    # output.close()
-    # test()
+
+    subprocess.check_call(["python", "Task.py"], stdout=output)
+
+
+if __name__ == '__main__':
+    run()
+    test()
