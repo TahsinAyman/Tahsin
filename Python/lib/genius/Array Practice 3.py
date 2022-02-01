@@ -1,6 +1,4 @@
-student_vote = []
-dic = dict()
-
+dic, student_vote, max, cnt, win = dict(), [], 0, 0, ''
 for _ in range(int(input())):
     student_vote.append(int(input()))
 
@@ -13,10 +11,6 @@ for i in student_vote:
                 dic[i] += 1
         except Exception:
             dic[i] = 1
-
-max = 0
-cnt = 0
-win = ''
 for x in dic:
     x = dic[x]
     if x > max:
@@ -36,5 +30,8 @@ try:
         win = 'No Winner!'
 except KeyError:
     pass
-
-print(win if win == 'No Winner!' else f'{win}\n{list(dic.keys())[list(dic.values()).index(max)]}')
+if win == 'No Winner!':
+    print(win)
+else:
+    print(win)
+    print(list(dic.keys())[list(dic.values()).index(max)])

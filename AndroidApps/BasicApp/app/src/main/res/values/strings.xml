@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">BasicApp</string>
+    <string name="app_name">App</string>
     <string name="click_me">Click me</string>
     <string name="tahsin_s_app">Tahsin\'s App</string>
     <string name="calculate">Calculate</string>
     <string name="enter_number">Enter Number</string>
     <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 </resources>

@@ -1,31 +1,49 @@
+/*
 package com.tahsin.gmail;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
-    @SuppressLint("SetTextI18n")
+public class MainActivity extends androidx.appcompat.app.AppCompatActivity {
+    private List<User> users = new ArrayList<>();
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    @SuppressLint("SetTextI18n")
-    public void onBtnClick(View view) {
-        EditText firstName = findViewById(R.id.firstName);
-        EditText lastName = findViewById(R.id.lastName);
-        EditText email = findViewById(R.id.email);
-        TextView showFirstName = findViewById(R.id.showFirstName);
-        TextView showLastName = findViewById(R.id.showLastName);
-        TextView showEmail = findViewById(R.id.showEmail);
 
-        showFirstName.setText("First Name: " + firstName.getText().toString());
-        showLastName.setText("Last Name: " + lastName.getText().toString());
-        showEmail.setText("Email: " + email.getText().toString());
+    public void onLoginBtnClick(View view) {
+        try {
+            EditText email = findViewById(R.id.email);
+            EditText pass = findViewById(R.id.password);
+            User user = new User(email.getText().toString(), pass.getText().toString());
+            for (User u : users) {
+                if (user.getEmail().equals(u.getEmail()) &&
+                        user.getPassword().equals(u.getPassword())) {
+                    Toast.makeText(this, "login Succesfully", Toast.LENGTH_SHORT).show();
+                }
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Login Error!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void onRegisterBtnClick(View view) {
+        try {
+            EditText email = findViewById(R.id.email);
+            EditText pass = findViewById(R.id.password);
+            User user = new User(email.getText().toString(), pass.getText().toString());
+            email.setText("");
+            pass.setText("");
+            this.users.add(user);
+
+            Toast.makeText(this, "Succesfull Register", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast.makeText(this, "Error! Register", Toast.LENGTH_SHORT).show();
+        }
     }
 }
+*/

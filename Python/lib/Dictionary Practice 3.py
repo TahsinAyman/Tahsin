@@ -5,9 +5,6 @@ for _ in range(int(input())):
     dic[lst[0]] = lst[1]
 
 print('lex = {')
-for i in range(len(dic)):
-    if i != len(dic) - 1:
-        print(f'"{list(dic.keys())[i]}": "{list(dic.values())[i]}",')
-    else:
-        print(f'"{list(dic.keys())[i]}": "{list(dic.values())[i]}"')
+for i in dic:
+    print(f'    "{i}": "{dic[i]}",' if i != list(dic.keys())[-1] else f'    "{i}": "{dic[i]}"')
 print('}')

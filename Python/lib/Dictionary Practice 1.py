@@ -1,12 +1,12 @@
-text = input()
-word = input()
+text = input().lower()
+for i in "\"'.,:;!?":
+    text = text.replace(i, ' ')
+
 words = dict()
 
 for i in text.split():
-    cnt = 0
-    for y in text.split():
-        if i == y:
-            cnt += 1
-    words[i] = cnt
-
-print(words[word])
+    words[i] = text.split().count(i)
+try:
+    print(words[input()])
+except KeyError:
+    print(0)

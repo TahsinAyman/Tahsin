@@ -28,9 +28,10 @@ void Startup() {
 		printf("3. type \"HTML\" for doing Java programming\n");
 		printf("4. type \"Java\" for doing Java programming\n");
 		printf("5. type \"Python\" for doing Python programming\n");
-		printf("5. type \"Django\" for doing Django programming\n");
-		printf("6. type \"Update\" for Updateing the Workspace\n");
-		printf("7. type \"Pulling\" for Pulling the changes of the workspace\n\n");
+		printf("6. type \"Django\" for doing Django programming\n");
+		printf("7. type \"Update\" for Updateing the Workspace\n");
+		printf("8. type \"cmd\" for Opening Command prompt\n");
+		printf("9. type \"Pulling\" for Pulling the changes of the workspace\n\n");
 
 		printf("Enter your choice: ");
 		scanf("%s", &c);
@@ -68,6 +69,10 @@ void Startup() {
 		}
 		else if (strcmp(c, "Django") == 0) {
 			system("code DJango\\");
+		}
+		else if (strcmp(c, "cmd") == 0) {
+			system("cls");
+			system("cmd");
 		}
 		else
 		{
