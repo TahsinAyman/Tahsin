@@ -16,7 +16,11 @@ def test():
 
 
 def run():
+<<<<<<< HEAD:Python/lib/hacker_rank_testing/Driver.py
     file = open('InputFile.txt').readlines()
+=======
+    file = open('inputFile.txt').readlines()
+>>>>>>> 2c730a6a345bef0d6c3e7f65a3e53e96b8c833a7:Python/lib/file_handaling/Project 1/Driver.py
     output = open('ActualOutput.txt', 'w')
     input_file = []
     for i in file:
