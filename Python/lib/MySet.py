@@ -9,7 +9,7 @@ def my_set(lst):
             if i is lst[y + 1]:
                 if not cnt:
                     cnt = True
-                    tmp = lst.index(i)
+                    tmp = lst.document(i)
                 lst.remove(i)
 
 
