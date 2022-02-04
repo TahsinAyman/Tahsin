@@ -18,7 +18,11 @@ for i in text:
     lst.append(letter[i[0]])
 lst.sort()
 
-for i in lst:
-    for y in text:
-        pass
+for x in range(len(text)):
+    for z in text:
+        for y in letter:
+            if i[0] == y:
+                result.append(z)
+
+
 print(result)
