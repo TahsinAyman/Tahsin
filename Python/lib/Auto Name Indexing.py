@@ -9,10 +9,44 @@ while True:
         text.append(txt)
     else:
         break
+key = []
+value = []
 lst = []
+
 for i in text:
     lst.append(letter[i[0]])
+print(lst)
 lst.sort()
+<<<<<<< HEAD
+print(lst)
+
+for i in text:
+    k = letter[i[0]]
+    key.append(k)
+    value.append(i)
+
+print(key)
+key.sort()
+print(key)
+
+print(text)
+
+for x in key:
+    a = value[key.index(x)]
+    print(a)
+
+"""
+apple
+apple
+pie
+i
+really
+like
+pie
+
+
+"""
+=======
 dic = dict()
 for i in text:
     dic[letter[i[0]]] = i
@@ -20,3 +54,4 @@ for x in lst:
     result.append(dic[x])
 for i in result:
     print(i)
+>>>>>>> d89652b01430a13392b72fc3fec0b9715d3a0945
