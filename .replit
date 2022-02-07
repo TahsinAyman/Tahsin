@@ -1,2 +1,2 @@
 language = "python3"
-run = "python Python/root/App.py"
+run = "python \"Python/lib/discord/doreamon bot.py\""
