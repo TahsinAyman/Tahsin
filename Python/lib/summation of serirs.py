@@ -1,5 +1,7 @@
-def summationOfSeries(n):
-    pass
+def summation_of_series(n):
+    if n <= 1:
+        return n
+    return n + summation_of_series(n - 1)
 
 
-summationOfSeries(5)
+print(summation_of_series(0))
