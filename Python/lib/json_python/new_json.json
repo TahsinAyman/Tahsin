@@ -1,0 +1,60 @@
+[
+    {
+        "name": "Adarsha",
+        "place": "Narayanganj",
+        "students": [
+            {
+                "class": 7,
+                "id": 10234,
+                "name": "Tahsin",
+                "roll": 12
+            },
+            {
+                "class": 6,
+                "id": 10232,
+                "name": "Orko",
+                "roll": 14
+            }
+        ]
+    },
+    {
+        "name": "Shamsul Haque Khan",
+        "place": "Demara, Narayanganj",
+        "students": [
+            {
+                "class": 4,
+                "id": 10245,
+                "name": "Ayman",
+                "phone": 213,
+                "roll": 12
+            },
+            {
+                "class": 2,
+                "id": 1022,
+                "name": "Mohammad",
+                "phone": 213,
+                "roll": 14
+            }
+        ]
+    },
+    {
+        "name": "Monno",
+        "place": "Manikganj",
+        "students": [
+            {
+                "class": 1,
+                "id": 20012,
+                "name": "Ahnaf",
+                "phone": 213,
+                "roll": 200
+            },
+            {
+                "class": "Versity 1st Year",
+                "id": 2012312,
+                "name": "Ali",
+                "phone": 213,
+                "roll": 18
+            }
+        ]
+    }
+]
