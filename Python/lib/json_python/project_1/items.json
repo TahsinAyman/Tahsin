@@ -1,0 +1,17 @@
+[
+    {
+        "food": "Ckicken",
+        "price": 120,
+        "rate": 5
+    },
+    {
+        "food": "Beaf",
+        "price": 200,
+        "rate": 4
+    },
+    {
+        "food": "Burger",
+        "price": 200,
+        "rate": 10
+    }
+]
