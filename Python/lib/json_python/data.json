@@ -1,0 +1,49 @@
+[
+    {
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "antonyms": [],
+                        "definition": "",
+                        "example": "",
+                        "synonyms": []
+                    }
+                ],
+                "partOfSpeech": "noun"
+            }
+        ],
+        "origin": "mid 19th century: originally referring to coffee from Java1.",
+        "phonetic": "\u02c8d\u0292\u0251\u02d0v\u0259",
+        "phonetics": [
+            {
+                "audio": "//ssl.gstatic.com/dictionary/static/sounds/20200429/java--1_gb_1.mp3",
+                "text": "\u02c8d\u0292\u0251\u02d0v\u0259"
+            }
+        ],
+        "word": "java"
+    },
+    {
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "antonyms": [],
+                        "definition": "a general-purpose computer programming language designed to produce programs that will run on any computer system.",
+                        "synonyms": []
+                    }
+                ],
+                "partOfSpeech": "noun"
+            }
+        ],
+        "origin": "1990s: with allusion to java.",
+        "phonetic": "\u02c8d\u0292\u0251\u02d0v\u0259",
+        "phonetics": [
+            {
+                "audio": "//ssl.gstatic.com/dictionary/static/sounds/20200429/java--1_gb_1.mp3",
+                "text": "\u02c8d\u0292\u0251\u02d0v\u0259"
+            }
+        ],
+        "word": "Java"
+    }
+]
