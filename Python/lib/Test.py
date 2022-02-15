@@ -1,3 +1,3 @@
-import discord
+n = int(input('Enter The Value: '))
 
-print(discord)
+print(n)
