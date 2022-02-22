@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "word": "java",
         "phonetic": "/ˈdʒɑː.və/",
         "phonetics": [
@@ -33,3 +34,11 @@
         ]
     }
 ]
+=======
+        "name": "Tahsin",
+        "father": "Rahsed",
+        "mother": "Touhida Akter",
+        "birth_number": 122345532234,
+    }
+]
+>>>>>>> d5cdb84cd1c03dff014440fff43e4b5e7a6e5a4c
