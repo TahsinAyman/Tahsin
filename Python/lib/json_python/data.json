@@ -1,8 +1,44 @@
 [
     {
+<<<<<<< HEAD
+        "word": "java",
+        "phonetic": "/ˈdʒɑː.və/",
+        "phonetics": [
+            {
+                "text": "/ˈdʒɑː.və/",
+                "audio": ""
+            }
+        ],
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "A blend of coffee imported from the island of Java."
+                    },
+                    {
+                        "definition": "Coffee in general."
+                    },
+                    {
+                        "definition": "A dance popular in France in the early 20th century."
+                    }
+                ]
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/java"
+        ]
+    }
+]
+=======
         "name": "Tahsin",
         "father": "Rahsed",
         "mother": "Touhida Akter",
         "birth_number": 122345532234,
     }
 ]
+>>>>>>> d5cdb84cd1c03dff014440fff43e4b5e7a6e5a4c

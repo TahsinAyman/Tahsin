@@ -4,10 +4,10 @@
       "inheritEnvironments": [
         "msvc_x86"
       ],
-      "name": "x86-Release",
+      "name": "python3",
       "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
+        "${python}",
+        "${E:\\workspace\\Tahsin}\\**"
       ],
       "defines": [
         "WIN32",
