@@ -1,13 +1,47 @@
-dic = dict()
+from collections.abc import Iterable
 
-for _ in range(int(input())):
-    lst = input().split()
-    dic[lst[0]] = lst[1]
+a = 1
+print(type(a))
+if isinstance(a, int):
+    print('a is a ')
 
-print('lex = {')
-for k, v in dic.items():
-    if k != list(dic.keys())[-1]:
-        print(f'    "{k}": "{v}", ')
+# invoice = {
+#     "id": 1,
+#     "date": "2022-02-22",
+#     "ok": [1, 2],
+#     "items": {
+#         "item": "Pen",
+#         "quantity": 10,
+#         "unitprice": 25.5
+#     },
+#     "total": 255.0
+# }
+invoice = [
+    1,
+    2,
+    3,
+    [
+        4,
+        5,
+        6
+    ],
+    {
+        1: 2
+    }
+]
+# if isinstance(invoice, Iterable)
+'''
+Output:
+1
+2022-02-22
+Pen
+10
+25.5
+255.0
+'''
+for i in invoice:
+    if isinstance(invoice[i], list) or isinstance(invoice[i], tuple) or isinstance(invoice[i], dict):
+        for x in invoice[i]:
+            print(invoice[i][x])
     else:
-        print(f'    "{k}": "{v}"')
-print('}')
+        print(invoice[i])
