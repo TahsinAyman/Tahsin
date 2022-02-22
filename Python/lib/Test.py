@@ -1,3 +1,1 @@
-import discord
-
-print(discord)
+print("Hello world...")

@@ -1,17 +1,27 @@
 [
     {
-        "food": "Ckicken",
+        "food": "Chicken",
         "price": 120,
         "rate": 5
     },
     {
         "food": "Beaf",
-        "price": 200,
-        "rate": 4
+        "price": 200
     },
     {
         "food": "Burger",
-        "price": 200,
-        "rate": 10
+        "price": 200
+    },
+    {
+        "food": "Pizza",
+        "price": 250
+    },
+    {
+        "food": "Mushroom",
+        "price": 50
+    },
+    {
+        "food": "Ice Cream",
+        "price": "50"
     }
 ]
