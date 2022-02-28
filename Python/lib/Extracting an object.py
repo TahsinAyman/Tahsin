@@ -10,5 +10,11 @@ def extract(obj):
 
 
 if __name__ == '__main__':
-    extract([])  # Input Values Here
+    var = [{
+        'items': 12,
+        'something': {
+            'its nothing': [123, [132, [[[10]]]]]
+        }
+    }]
+    extract(var)  # Input Values Here
 
