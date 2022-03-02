@@ -1,1 +1,1 @@
-py manage.py runserver 6969
+py manage.py

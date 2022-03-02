@@ -1,56 +1,103 @@
 [
-    {
-        "name": "Adarsha",
-        "place": "Narayanganj",
-        "students": [
-            {
-                "name": "Tahsin",
-                "roll": 12,
-                "id": 10234,
-                "class": 7
-            },
-            {
-                "name": "Orko",
-                "roll": 14,
-                "id": 10232,
-                "class": 6
-            }
-        ]
-    },
-    {
-        "name": "Shamsul Haque Khan",
-        "place": "Demara, Narayanganj",
-        "students": [
-            {
-                "name": "Ayman",
-                "roll": 12,
-                "id": 10245,
-                "class": 4
-            },
-            {
-                "name": "Mohammad",
-                "roll": 14,
-                "id": 1022,
-                "class": 2
-            }
-        ]
-    },
-    {
-        "name": "Monno",
-        "place": "Manikganj",
-        "students": [
-            {
-                "name": "Ahnaf",
-                "roll": 200,
-                "id": 20012,
-                "class": 1
-            },
-            {
-                "name": "Ali",
-                "roll": 18,
-                "id": 2012312,
-                "class": "Versity 1st Year"
-            }
-        ]
-    }
+    [
+        {
+            "customer_name": "AAA",
+            "id": 1,
+            "phone": "111"
+        },
+        {
+            "customer_name": "TA",
+            "id": 2,
+            "phone": "222"
+        },
+        {
+            "customer_name": "TT",
+            "id": 3,
+            "phone": "333"
+        },
+        {
+            "customer_name": "Touhida Akter",
+            "id": 4,
+            "phone": "444"
+        },
+        {
+            "customer_name": "RK",
+            "id": 5,
+            "phone": "555"
+        },
+        {
+            "customer_name": "Chapa",
+            "id": 6,
+            "phone": "666"
+        },
+        {
+            "customer_name": "RA",
+            "id": 7,
+            "phone": "777"
+        }
+    ],
+    [
+        {
+            "id": 9,
+            "item_name": "Pen"
+        },
+        {
+            "id": 10,
+            "item_name": "Khata"
+        },
+        {
+            "id": 11,
+            "item_name": "Fountain Pen"
+        },
+        {
+            "id": 12,
+            "item_name": "Pencil"
+        },
+        {
+            "id": 13,
+            "item_name": "Burger"
+        }
+    ],
+    [
+        {
+            "id": 1,
+            "item_id": 9,
+            "quantity": 10,
+            "sales_id": 1,
+            "unit_price": 15
+        },
+        {
+            "id": 2,
+            "item_id": 10,
+            "quantity": 10,
+            "sales_id": 1,
+            "unit_price": 40
+        },
+        {
+            "id": 3,
+            "item_id": 9,
+            "quantity": 20,
+            "sales_id": 2,
+            "unit_price": 15
+        },
+        {
+            "id": 4,
+            "item_id": 10,
+            "quantity": 20,
+            "sales_id": 2,
+            "unit_price": 40
+        }
+    ],
+    [
+        {
+            "customer_id": 1,
+            "id": 1,
+            "sales_date": "2022-02-22 09:30:05"
+        },
+        {
+            "customer_id": 2,
+            "id": 2,
+            "sales_date": "2022-02-22 09:30:05"
+        }
+    ]
 ]
