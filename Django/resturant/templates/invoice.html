@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice</title>
+    <style>
+        h1 {
+            color: white;
+            font-family: "Courier New";
+        }
+        li {
+            color: white;
+            font-family: "Courier New";
+            font-size: 25px
+        }
+    </style>
+        <script>
+        function func() {
+            var string = document.getElementById("text1").value;
+            alert(string)
+        }
+    </script>
+</head>
+<body style="background-color: black">
+    <h1>Invoice</h1>
+    <hr>
+    {% for i in invoice %}
+        {% for k, v in i.items %}
+            <li>{{ k }}: {{ v }}</li>
+        {% endfor %}
+        <hr>
+    {% endfor %}
+</body>
+</html>

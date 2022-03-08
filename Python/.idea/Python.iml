@@ -11,6 +11,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Tahsin-BOT" />
     <orderEntry type="module" module-name="Django" />
+    <orderEntry type="module" module-name="Flask" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="renderExternalDocumentation" value="true" />

@@ -1,9 +1,12 @@
 import mysql.connector
+from subprocess import check_call as run_file
 from resturant.Export import *
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
+from resturant.Invoice import receat
 import json
+from resturant.Invoice import *
 
 
 def resturant_customer(request):
@@ -26,5 +29,10 @@ def resturant_sales_main(request):
     return HttpResponse(result)
 
 
+def invoice(request):
+    result = receat()
+    return render(request, 'invoice.html', {'invoice': result})
+
+
 def resturant(request):
-    return render(request, 'index.html')
+    return render(request, "index.html")
