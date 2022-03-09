@@ -1,8 +1,1 @@
-import requests
-import json
-
-responce = requests.get("http://localhost:5000/")
-data = json.loads(responce.text)
-
-print(data)
-print(type(data))
+print(list(map(lambda s: s * s, list(map(int, input().strip().split())))))
