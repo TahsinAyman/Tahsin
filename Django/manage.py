@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
-import sys
+from threading import Thread
 
 
 def main():
@@ -17,6 +17,10 @@ def main():
         ) from exc
     execute_from_command_line(['manage.py', 'runserver', '6969'])
 
+def thread():
+    t1 = Thread(target=main)
+    main()
+    t1.start()
 
 if __name__ == '__main__':
     main()

@@ -4,9 +4,8 @@ from resturant.Export import *
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
-from resturant.Invoice import receat
 import json
-from resturant.Invoice import *
+from resturant.invoice import *
 
 
 def resturant_customer(request):

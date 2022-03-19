@@ -1,28 +1,28 @@
-class MyList:
-    multi_set = list()
-    __doc__ = """This is a Next Version of Set Class.
-Here you can take Multiple Inputs
+class Set():
+    __inaccessible_obj = []
 
-function:
-    add()
-    insert()
-    remove()
-"""
 
-    def __init__(self, multi_set=None):
-        if multi_set is None:
-            self.multi_set = []
 
-    def add(self, value=None, index=None):
-        if value is None:
-            pass
-        elif index is None:
-            self.multi_set.append(value)
-        else:
-            self.multi_set.insert(index, value)
+    def __init__(self, obj):
+        self.__inaccessible_obj = obj
 
-    def remove(self, value):
-        self.multi_set.remove(value)
+    def operation(self):
+        lst = self.__inaccessible_obj
+
+        for i in lst:
+            cnt = lst.count(i) - 1
+
+            for y in range(cnt):
+                lst.remove(i)
+
+        self.__inaccessible_obj = lst
 
     def __str__(self):
-        return str(self.multi_set)
+        self.operation()
+        return str(self.__inaccessible_obj)
+
+if __name__ == '__main__':
+    lst = list(map(int, input().strip().split()))
+    print(lst)
+    s = Set(lst)
+    print(s)

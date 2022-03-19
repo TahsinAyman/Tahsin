@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import flask
 
 app = Flask(__name__)
-lst = (1, 2, 3)
+lst = [{"name": "Tahsin"}]
 
 
 @app.route('/')
@@ -12,8 +12,11 @@ def index():
 
 @app.route('/home')
 def home():
-    return lst
+    return str(lst)
 
 
+def run():
+    app.run()
+    
 if __name__ == '__main__':
-    app.run(debug=True)
+    run()
