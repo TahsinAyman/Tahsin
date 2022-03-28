@@ -1,9 +1,10 @@
-<<<<<<< HEAD
-lst = list(map(int, input().strip().split()))
+class App:
+    @staticmethod
+    def main(args=[]):
+        print("This is A Sample Programmm At Sublime Text")
 
-for i in lst:
-    print(i)
-    
-=======
-print(list(map(lambda s: s * s, list(map(int, input().strip().split())))))
->>>>>>> 8cb1e71ddccd992b830dc872997c24a7107fc6ba
+
+if __name__ == '__main__':
+    import sys
+
+    App.main(sys.argv[1:])
