@@ -1,4 +1,11 @@
-lst = [1, 2, 3]
-lst1 = [3, 2, 1]
-lst.sort(reverse=True)
-print(lst)
+import sys
+import os
+sys.path.append("F:\\Workspace\\TahsinAyman\\Tahsin\\Python\\root")
+import App
+
+def main():
+    print(f"Test: {__name__}")
+    print(f"App: {App.__name__}")
+
+if __name__ == '__main__':
+    main()
