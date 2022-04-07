@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from os import system as cmd
 
 lst = []
@@ -94,3 +95,15 @@ for i in lst:
 
 for i in print_stuff:
     print(i)
+=======
+class App:
+    @staticmethod
+    def main(args=[]):
+        print("This is A Sample Programmm At Sublime Text")
+
+
+if __name__ == '__main__':
+    import sys
+
+    App.main(sys.argv[1:])
+>>>>>>> 160754ab82ef07eb35ef62546fbb05416123465d

@@ -1,22 +1,24 @@
-from flask import Flask, render_template
+from flask import *
+import requests
 import flask
+import json
 
 app = Flask(__name__)
-lst = [{"name": "Tahsin"}]
 
 
-@app.route('/')
+@app.route('/ip')
 def index():
-    return render_template('data.json')
-
-
-@app.route('/home')
-def home():
-    return str(lst)
+    string = str(request.full_path)
+    try:
+        lst = string.strip().split()
+    except Exception:
+        lst = [0, 0]
+    return str(string) + str(lst[1])
 
 
 def run():
     app.run()
-    
+
+
 if __name__ == '__main__':
     run()

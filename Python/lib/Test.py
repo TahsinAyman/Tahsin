@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from threading import Thread
 
 def pillow_pass(n):
@@ -8,3 +9,5 @@ def pillow_pass(n):
 
 if __name__ == '__main__':
     pass
+=======
+>>>>>>> 160754ab82ef07eb35ef62546fbb05416123465d

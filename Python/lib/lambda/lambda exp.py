@@ -1,0 +1,1 @@
+print(list(map(lambda i: i * i, list(map(int, input().strip().split())))))
