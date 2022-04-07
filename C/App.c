@@ -1,6 +1,9 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main() {
-	printf("Hello World...");
-	return 0;
+	typedef struct
+	{
+		char name[11];
+
+	};
 }

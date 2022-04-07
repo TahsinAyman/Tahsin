@@ -1,18 +1,7 @@
-from os import system as cmd
-
 lst = []
 for _ in range(list(map(int, input().strip().split()))[0]):
     lst.append(list(map(int, input().strip().split())))
-# cmd('cls')
 
-print_stuff = []
-
-# lst[3][5] = '*'
-#
-# for i in lst:
-#     for y in i:
-#         print(y, end=' ')
-#     print()
 for i in range(len(lst)):
     for y in range(len(lst[i])):
         if lst[i][y] == 0:
@@ -91,6 +80,3 @@ for i in lst:
     for y in i:
         print(y, end=' ')
     print()
-
-for i in print_stuff:
-    print(i)

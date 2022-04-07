@@ -1,11 +1,10 @@
-import sys
-import os
-sys.path.append("F:\\Workspace\\TahsinAyman\\Tahsin\\Python\\root")
-import App
+from threading import Thread
 
-def main():
-    print(f"Test: {__name__}")
-    print(f"App: {App.__name__}")
+def pillow_pass(n):
+    lst = [_ for _ in range(1, n+1)]
+    while True:
+        if len(lst) == 1:
+            return lst[0]
 
 if __name__ == '__main__':
-    main()
+    pass
