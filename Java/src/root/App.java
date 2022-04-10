@@ -1,19 +1,19 @@
 package root;
 
-import org.openqa.selenium.chrome.ChromeDriver;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class App {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "E:\\Tutorial and Teaching\\Testing\\Software Testing using Selenium\\dvivers\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        JFrame frame = new JFrame("Button");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 450);
+        frame.setVisible(true);
+        frame.setLayout(new FlowLayout());
 
-        // Launch website
-        driver.navigate().to("http://www.google.com/");
-
-        // Click on the search text box and send value
-        driver.findElement(By.id("lst-ib")).sendKeys("javatpoint tutorials");
-
-        // Click on the search button
-        driver.findElement(By.name("btnK")).click();
+        JButton button = new JButton();
+        button.setBounds(50, 50, 300, 300);
+        frame.add(button);
     }
 }
