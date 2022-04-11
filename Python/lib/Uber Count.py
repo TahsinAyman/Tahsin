@@ -1,32 +1,29 @@
 """
 Input Format:
 1, 2, 2, 4
+3, 3, 3, 3, 3, 3
+1, 3, 2, 2
 
 Output Format:
 3
+4
+2
 """
-
 
 lst = list(map(int, input().strip().split(',')))
 
 uber = 0
 
-sum = 0
 for i in lst:
-    sum += i
-
-uber = sum / len(lst)
-
-u = str(uber)
-index = None
-for i in range(len(u)):
-    if u[i] == '.':
-        index = i
-        break
-
-if int(u[index + 1:]) > 0:
-    uber = int(u[:index]) + 1
-else:
-    uber = int(u[:index])
-
+    if i == 4:
+        uber += 1
+    else:
+        is_true = False
+        for y in lst:
+            if y == 4 - i:
+                lst.remove(y)
+                is_true = True
+                uber += 1
+        if not is_true:
+            uber += 1
 print(uber)

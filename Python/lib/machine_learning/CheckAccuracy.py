@@ -27,4 +27,8 @@ def accuracy(x, y, t_s):
                 index = i
         s = s[index+1:]
         score = int(s[:2])
+<<<<<<< HEAD
         return score
+=======
+        return score
+>>>>>>> b4b5967b5c6dae7d493a50712770a493cf27bd82
