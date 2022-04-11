@@ -1,17 +1,14 @@
 lst = []
 for _ in range(list(map(int, input().strip().split()))[0]):
     lst.append(list(map(int, input().strip().split())))
-
+print()
 for i in range(len(lst)):
     for y in range(len(lst[i])):
         if lst[i][y] == 0:
             lst[i][y] = ' '
         elif lst[i][y] == 1:
             lst[i][y] = '#'
-
-for i in range(len(lst)):
-    for y in range(len(lst[i])):
-        if lst[i][y] == 2:
+        elif lst[i][y] == 2:
             lst[i][y] = '|'
             try:
                 lst[i-1][y] = '*'
@@ -49,7 +46,7 @@ for i in range(len(lst)):
                 lst[i-3][y] = '*'
             except Exception:
                 pass
-        if lst[i][y] == 3:
+        elif lst[i][y] == 3:
             lst[i][y] = '_'
             try:
                 lst[i-1][y] = '_'
@@ -78,5 +75,5 @@ for i in range(len(lst)):
 
 for i in lst:
     for y in i:
-        print(y, end=' ')
+        print(y, end='')
     print()

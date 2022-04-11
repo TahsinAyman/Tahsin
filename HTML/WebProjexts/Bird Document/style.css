@@ -3,26 +3,38 @@ body {
 }
 p {
     color: white;
+    font-family: Courier New;
 }
 h1 {
     color: white;
+    font-family: Courier New;
 }
 h2 {
     color: white;
+    font-family: Courier New;
 }
 h3 {
     color: white;
+    font-family: Courier New;
 }
 h4 {
     color: white;
+    font-family: Courier New;
 }
 h5 {
     color: white;
+    font-family: Courier New;
 }
 h6 {
     color: white;
+    font-family: Courier New;
 }
 a {
     text-decoration: none;
     color: black;
+    font-family: Courier New;
+}
+label {
+    font-family: Courier New;
+    color: white;
 }
