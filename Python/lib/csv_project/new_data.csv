@@ -1,1 +1,4 @@
-Tahsin,12,MaleAyman,12,MaleBrishti,14,Female
+name,age,gender
+Tahsin,12,Male
+Ayman,12,Male
+"Tahsin, Ayman",12,Male
