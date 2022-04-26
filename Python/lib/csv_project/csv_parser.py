@@ -1,14 +1,12 @@
 import csv
-
+rows = header = []
 with open('data.csv') as file:
-    data = csv.reader(file)
-    next(data)
-
-    # for line in data:
-    #     print(line)
-
-    with open('new_data.csv', 'w') as write_file:
-        csv_writer = csv.writer(write_file, delimiter=',')
-
-        for line in data:
-            csv_writer.writerow(line)
+    csv_reader = csv.reader(file, delimiter='-')
+    # header = next(csv_reader)
+    for row in csv_reader:
+        rows.append(row)
+    print(rows)
+    with open('new_data.csv', 'w', newline="") as write_file:
+        csv_write = csv.writer(write_file)
+        # csv_write.writerow(header)
+        csv_write.writerows(rows)

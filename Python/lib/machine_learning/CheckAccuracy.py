@@ -1,8 +1,8 @@
-def accuracy(x, y, t_s):
-    from sklearn.model_selection import train_test_split
-    from sklearn.tree import DecisionTreeClassifier
-    from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
 
+def accuracy(x, y, t_s):
     if t_s < 100:
         s = str(t_s)
         s = "0." + s
