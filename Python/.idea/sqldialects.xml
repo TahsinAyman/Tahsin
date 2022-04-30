@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/../Django/resturant/Export.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/../Flask/Restful API.py" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/lib/mysql_database/App.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/lib/mysql_database/Export.py" dialect="GenericSQL" />
   </component>
