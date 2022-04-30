@@ -37,12 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'resturant',
-    'main',
-<<<<<<< HEAD
-    'School'
-=======
-    'school'
->>>>>>> 83fce1407e27b8b0395040b7ff181f375962ec19
+    'main'
 ]
 
 MIDDLEWARE = [

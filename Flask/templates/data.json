@@ -1,12 +1,6 @@
 [
     {
-        "name": "tahsin",
-        "age": 12,
-        "alive": true
-    },
-    {
-        "name": "adam",
-        "age": 1000,
-        "alive": false
+        "ID": 1,
+        "Name": "Tahsin"
     }
 ]
