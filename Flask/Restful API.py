@@ -1,52 +1,58 @@
-from flask import *
 import json
-import sys
+
+from flask import *
 
 app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    with open('templates\\data.json') as file:
-        lst = json.load(file)
-    return jsonify(lst)
+    if request.method == 'POST':
+        try:
+            i = int(request.form['id'])
+        except Exception:
+            return "Error! 404"
+        return redirect(url_for('show_id', id=i))
+    else:
+        return render_template('index.html')
 
 
-@app.route('/<int:id>', methods=['GET', 'POST'])
-def display(id):
+@app.route('/show/all/', methods=['GET', 'POST'])
+def show_all():
     with open('templates\\data.json') as file:
         data = json.load(file)
-    output = None
+    return jsonify(data)
+
+
+@app.route('/show/id/<int:id>', methods=['GET', 'POST'])
+def show_id(id):
+    with open('templates\\data.json') as file:
+        data = json.load(file)
+    result = None
     for i in data:
-        if id == i['ID']:
-            output = i
-            break
-    return jsonify(output)
+        if i['ID'] == id:
+            result = i
+    return jsonify(result)
 
 
 @app.route('/add/', methods=['GET', 'POST'])
-def enter():
+def add():
     if request.method == 'POST':
-        i = request.form['id']
-        n = request.form['name']
-        return redirect(url_for('add', id=i, name=n))
+        id = request.form['id']
+        name = request.form['name']
+        with open('templates\\data.json') as file:
+            data = json.load(file)
+        for i in data:
+            if i['ID'] == int(id):
+                return '<script>alert("Already Has a Same ID")</script><meta http-equiv = "refresh" content = "1; url ' \
+                       '= http://localhost:6969/add/" /> '
+        data.append({"ID": int(id), "Name": name})
+        with open('templates\\data.json', 'w') as file:
+            json.dump(obj=data, fp=file, indent=4)
+        return redirect(f"http://localhost:6969/show/id/{id}")
     else:
         return render_template('Add.html')
 
 
-@app.route('/<int:id>/<string:name>/')
-def add(id, name):
-    with open('templates\\data.json') as read_file:
-        data = json.load(read_file)
-    data.append({"ID": id, "Name": name})
-    with open('templates\\data.json', 'w') as write_file:
-        json.dump(fp=write_file, obj=data, indent=4)
-    return f"<h1>ID: {id}</h1><h1>Name: {name}</h1><h1>Added</h1>"
-
-
-def run():
-    app.run(debug=True, host='localhost', port=6969)
-
-
 if __name__ == '__main__':
-    run()
+    app.run(debug=True, host='localhost', port=6969)

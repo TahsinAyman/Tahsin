@@ -1,16 +1,13 @@
 from flask import *
 
-app = Flask(__name__)
+app = Flask('app')
+app.secret_key = 'asaasas'
 
 
-@app.route('/')
-def index():
-    return "Hello"
-
-
-def run():
-    app.run(debug=True, host='localhost', port=6969)
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    return "<h1>Hello World..</h1>"
 
 
 if __name__ == '__main__':
-    run()
+    app.run(debug=True, host='0.0.0.0', port=8080)
