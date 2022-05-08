@@ -15,7 +15,7 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
-    execute_from_command_line(['manage.py', 'runserver', '6969'])
+    execute_from_command_line(['manage.py', 'runserver', '192.168.0.55:8080'])
 
 
 def thread():
