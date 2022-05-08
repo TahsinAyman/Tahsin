@@ -15,12 +15,13 @@ def home():
 
 
 @app.route('/dept/<int:id>')
-def show_emp(id):
-    emp = Employee.query.filter_by(dept_id=id).all()
+def deptById(id):
+    dept = Department.query.filter_by(id=id).first()
+    # emp = Employee.query.filter(Department.id == id).all()
     # User.query.filter(Role.id == 4, User.teams.any(Team.id.in_([team.id for team in current_user.teams]))).all()
     lst = []
-    for i in emp:
-        lst.append(i.dept_id)
+    for i in dept:
+        lst.append(i.dept_name)
     return jsonify(lst)
 
 
@@ -58,5 +59,5 @@ def update_student(id, name):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost', port=8080)
-    # db.create_all()
+    # app.run(debug=True, host='localhost', port=8080)
+    db.create_all()

@@ -12,6 +12,7 @@ class Department(db.Model):
     __tablename__ = 'de pt'
     id = db.Column(db.Integer, nullable=False, primary_key=True)
     dept_name = db.Column(db.String(50), nullable=False)
+    employees = db.relationship("Department", backref="dept", lazy=True)
 
 
 class Employee(db.Model):
@@ -19,7 +20,6 @@ class Employee(db.Model):
     id = db.Column(db.Integer, nullable=False, primary_key=True)
     emp_name = db.Column(db.String(50), nullable=False)
     dept_id = db.Column(db.Integer, db.ForeignKey('dept.id'))
-    dept = db.relationship("Department", backref=backref("dept", uselist=False))
 
 
 class Student(db.Model):
@@ -30,3 +30,6 @@ class Student(db.Model):
 
 if __name__ == '__main__':
     db.create_all()
+
+
+# https://code-with-me.global.jetbrains.com/UwLIi4LSTdHATAUEVOzOag#p=PC&fp=37E52D0358C8290CD1E4581B19A528A201DEFB7DDB248581516203C2486D2CE6
