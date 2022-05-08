@@ -1,4 +1,2 @@
-text = input().strip().split()
-text.sort()
-for i in text:
-    print(i)
+for i in range(len("Apu Naaa!")):
+    print("Apu Naaa!")

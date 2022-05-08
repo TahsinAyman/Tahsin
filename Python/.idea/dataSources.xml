@@ -15,5 +15,19 @@
       <jdbc-url>jdbc:mysql://localhost:3306/resturant</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="voting" uuid="178cd947-b983-4bd2-97f0-9fdee1ab93c2">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\workspace\TahsinAyman\Tahsin\Python\lib\sql_lite\databases\voting.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="Database" uuid="118874e5-294d-4a34-97f0-eebf8d5dbdc0">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\workspace\TahsinAyman\Tahsin\Python\lib\sql_lite\databases\database.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
