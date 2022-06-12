@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Dashboard {% endblock title %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="static\\css\\style.css">
+{% endblock head %}
+{% block body %}
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p style="color: red; font-size: 20px">{{  message }}</p>
+        {% endfor %}
+    {% endif %}
+    <form action="/send/" method="POST">
+        <h1>To:</h1>
+        <input type="text" name="to">
+
+        <h1>Message</h1>
+        <input type="text" name="message">
+        <br>
+        <input type="submit" value="Send">
+        <button><a style="color: black; text-decoration: None" href="/logout/">Logout</a></button>
+    </form>
+    <a href="/inbox/">Inbox</a>
+    <br>
+    <a href="/sent/">Sent</a>
+{% endblock body %}

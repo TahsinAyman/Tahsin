@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock title %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="..\\static\\css\\style.css">
+{% endblock head %}
+{% block body %}
+    {% if message %}
+        {% if message != "Registered" %}
+            <script type="text/javascript">
+                alert("{{ message }}")
+            </script>
+        {% endif %}
+        {% if message == "Registered" %}
+            <script type="text/javascript">
+                alert("{{ message }}")
+            </script>
+            <meta http-equiv="refresh" content="1; url=http://localhost:80/" />
+        {% endif %}
+    {% endif %}
+    <form action="http://localhost:80/register/" method="POST">
+        <table>
+            <tr>
+                <td>
+                    <h1>User: </h1>
+                </td>
+                <td>
+                    <input type="text" name="user">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1>Password: </h1>
+                </td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Register">
+        <br>
+        <a href="/login/">Already Have An Account? Login</a>
+    </form>
+{% endblock body %}

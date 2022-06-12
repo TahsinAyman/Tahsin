@@ -1,0 +1,8 @@
+<invoice>
+    <id>1</id>
+    <name>Tahsin</name>
+    <date>2022-05-18</date>
+    <food>Burger</food>
+    <price>100</price>
+    <total_price>200</total_price>
+</invoice>

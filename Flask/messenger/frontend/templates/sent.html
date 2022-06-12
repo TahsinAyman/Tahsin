@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Sent{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="..\\static\\css\\style.css">
+{% endblock head %}
+{% block body %}
+    <h1>Sent</h1>
+    {% for i in data: %}
+        <li>{{i["message"]}} - {{ i["to_user"]}}</li>
+    {% endfor %}
+{% endblock body %}
