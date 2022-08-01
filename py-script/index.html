@@ -4,12 +4,16 @@
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
   </head>
   <body>
-      <!-- <div style="background-color: red;"><h1 id="result"></h1></div>
+      <div style="background-color: red;"><h1 id="result"></h1></div>
       <py-script>
-var1 = int(input())
-var2 = int(input())
-pyscript.write('result', var1 + var2)
-      </py-script> -->
+          import requests
+          <!-- from os import system as cmd -->
+
+          <!-- cmd('pip install requests') -->
+          response = requests.get("https://customer.tahsinayman.repl.co/show/all/")
+          data = response.json()
+          print(data)
+      </py-script>
       <py-repl id="my-repl" auto-generate="true"></py-repl>
   </body>
 </html>

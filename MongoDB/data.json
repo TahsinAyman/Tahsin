@@ -1,0 +1,10 @@
+{
+    "name": "Tahsin",
+    "age": 12,
+    "schools": [
+        "Adarsha",
+        "Shamsul Haque Khan"
+    ],
+    "is_married": false,
+    "height": 5.6
+}

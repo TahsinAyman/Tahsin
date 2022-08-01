@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#para").click(
+                    function(){
+                        $(this).hide(1000, function(){
+                            $("#para2").hide(2000);
+                        });
+                    }
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <p>If you click on me, I will disappear.</p>
+        <p id="para">Click me away!</p>
+        <p id="para2">Click me too!</p>
+    </body>
+</html>

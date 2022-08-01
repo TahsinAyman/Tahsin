@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(40, 40, 40);
+    margin: 50px
+}
+h1, h2, h3, h4, h5, h6, p, td, tr {
+    color: white;
+    font-family: Courier New;
+    font-size: 50px;
+}
+button {
+    font-family: Courier New;
+    background-color: rgb(8, 163, 169);
+    font-size: 50px;
+}
+input {
+    font-family: Courier New;
+    font-size: 50px;
+}
+a {
+    color: rgb(244, 154, 85);
+}
+

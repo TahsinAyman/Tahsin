@@ -1,43 +1,61 @@
 {% extends 'base.html' %}
 {% block title %}Register{% endblock title %}
 {% block head %}
-<link rel="stylesheet" type="text/css" href="..\\static\\css\\style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="shortcut icon" alt="x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS99uVNckIreO6RnCBfecg7NEkmYgxYDMvL6ZJH6rIrB3TPZGCnTgu5G8ydv1pyjDXeCkI&usqp=CAU">
 {% endblock head %}
 {% block body %}
     {% if message %}
         {% if message != "Registered" %}
-            <script type="text/javascript">
-                alert("{{ message }}")
-            </script>
+            <div class="alert alert-danger" role="alert">
+                <p class="alert-link">{{ message }}</a>
+            </div>
         {% endif %}
         {% if message == "Registered" %}
-            <script type="text/javascript">
-                alert("{{ message }}")
-            </script>
-            <meta http-equiv="refresh" content="1; url=http://localhost:80/" />
+               <div class="alert alert-success" role="alert">
+                    <p class="alert-link">{{ message }}</a>
+                </div>
+                <meta http-equiv="refresh" content="1; url=/" />
         {% endif %}
     {% endif %}
-    <form action="http://localhost:80/register/" method="POST">
-        <table>
-            <tr>
-                <td>
-                    <h1>User: </h1>
-                </td>
-                <td>
-                    <input type="text" name="user">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h1>Password: </h1>
-                </td>
-                <td>
-                    <input type="password" name="password">
-                </td>
-            </tr>
-        </table>
-        <input type="submit" value="Register">
-        <br>
-        <a href="/login/">Already Have An Account? Login</a>
-    </form>
+          <div class="container h-100">
+            <div class="row">
+              <div class="col-md-12 col-lg-12 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register</p>
+
+                <form action="#" method="POST" class="mx-1 mx-md-4">
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="form3Example1c" class="form-control" name="user" />
+                      <label class="form-label" for="form3Example1c">User</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="password" id="form3Example3c" class="form-control" name="password" />
+                      <label class="form-label" for="form3Example3c">Password</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label"><a href="/login/">Already Have An Account?</a></label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <input type="submit" class="btn btn-primary btn-lg" value="Register" />
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
 {% endblock body %}

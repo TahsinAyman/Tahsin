@@ -1,137 +1,245 @@
-CREATE DATABASE  IF NOT EXISTS `resturant` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `resturant`;
--- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost    Database: resturant
--- ------------------------------------------------------
--- Server version	8.0.28
+-- Host: 127.0.0.1:3333
+-- Generation Time: Jul 20, 2022 at 05:17 AM
+-- Server version: 8.0.29
+-- PHP Version: 7.4.29
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!50503 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Table structure for table `customer`
+-- Database: `resturant`
 --
 
-DROP TABLE IF EXISTS `customer`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `customer` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `customer_name` varchar(50) NOT NULL,
-  `phone` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `customer`
+-- Table structure for table `customers`
 --
 
-LOCK TABLES `customer` WRITE;
-/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (1,'AAA','111'),(2,'TA','222'),(3,'TT','333'),(4,'Touhida Akter','444'),(5,'RK','555'),(6,'Chapa','666'),(7,'RA','777');
-/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
-UNLOCK TABLES;
+CREATE TABLE `customers` (
+  `id` int NOT NULL,
+  `first_name` text NOT NULL,
+  `last_name` text NOT NULL,
+  `points` int NOT NULL DEFAULT 0
+);
 
 --
--- Table structure for table `item`
+-- Dumping data for table `customers`
 --
 
-DROP TABLE IF EXISTS `item`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `item` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `item_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+INSERT INTO `customers` (`id`, `first_name`, `last_name`, `points`) VALUES
+(1, 'Tahsin', 'Ayman', 1000),
+(2, 'Touhida', 'Akter', 2000),
+(3, 'Rasheed', 'karim', 3000),
+(4, 'Tasmiah', 'Tabassum', 4000),
+(5, 'Abdullah', 'Al Adib', 0),
+(6, 'Roushon', 'Ara', 5000);
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `item`
+-- Stand-in structure for  `invoice`
+-- (See below for the actual view)
 --
+CREATE TABLE `invoice` (
+`id` int
+,`first_name` text
+,`last_name` text
+,`product` text
+,`quantity` int
+,`unit_price` int
+,`total_price` bigint
+,`date` date
+);
 
-LOCK TABLES `item` WRITE;
-/*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (9,'Pen'),(10,'Khata'),(11,'Fountain Pen'),(12,'Pencil'),(13,'Burger');
-/*!40000 ALTER TABLE `item` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `sales_details`
---
-
-DROP TABLE IF EXISTS `sales_details`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `sales_details` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `sales_id` int NOT NULL,
-  `item_id` int NOT NULL,
-  `quantity` int NOT NULL,
-  `unit_price` decimal(10,0) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_SalesDetial_SalesId_ItemId` (`sales_id`,`item_id`) /*!80000 INVISIBLE */,
-  KEY `FK_SalesDetails_SalesId_idx` (`sales_id`),
-  KEY `FK_SalesDetails_ItemId_idx` (`item_id`),
-  CONSTRAINT `FK_SalesDetails_ItemId` FOREIGN KEY (`item_id`) REFERENCES `item` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT `FK_SalesDetails_SalesId` FOREIGN KEY (`sales_id`) REFERENCES `sales_main` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `sales_details`
+-- Table structure for table `orders`
 --
 
-LOCK TABLES `sales_details` WRITE;
-/*!40000 ALTER TABLE `sales_details` DISABLE KEYS */;
-INSERT INTO `sales_details` VALUES (1,1,9,10,15),(2,1,10,10,40),(3,2,9,20,15),(4,2,10,20,40);
-/*!40000 ALTER TABLE `sales_details` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `sales_main`
---
-
-DROP TABLE IF EXISTS `sales_main`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `sales_main` (
-  `id` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `orders` (
+  `id` int NOT NULL,
   `customer_id` int NOT NULL,
-  `sales_date` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_Salse_Customer_id_idx` (`customer_id`),
-  CONSTRAINT `FK_Salse_Customer_id` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `date` date NOT NULL
+);
 
 --
--- Dumping data for table `sales_main`
+-- Dumping data for table `orders`
 --
 
-LOCK TABLES `sales_main` WRITE;
-/*!40000 ALTER TABLE `sales_main` DISABLE KEYS */;
-INSERT INTO `sales_main` VALUES (1,1,'2022-02-22 09:30:05'),(2,2,'2022-02-22 09:30:05');
-/*!40000 ALTER TABLE `sales_main` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+INSERT INTO `orders` (`id`, `customer_id`, `date`) VALUES
+(1, 1, '2022-07-20'),
+(2, 1, '2022-07-20'),
+(3, 2, '2024-07-11'),
+(4, 3, '2022-07-20'),
+(5, 4, '2022-07-15'),
+(6, 5, '2022-07-07');
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_items`
+--
+
+CREATE TABLE `order_items` (
+  `id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `order_id` int NOT NULL,
+  `quantity` int NOT NULL DEFAULT '1',
+  `unit_price` int NOT NULL
+);
+
+--
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `product_id`, `order_id`, `quantity`, `unit_price`) VALUES
+(3, 1, 1, 5, 1000),
+(4, 2, 1, 2, 200),
+(5, 3, 4, 3, 5000),
+(6, 5, 4, 6, 6000),
+(7, 6, 4, 7, 200),
+(8, 3, 2, 2, 100);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `payment_invoice`
+-- (See below for the actual view)
+--
+CREATE TABLE `payment_invoice` (
+`customer_id` int
+,`first_name` text
+,`last_name` text
+,`total_price` decimal(42,0)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int NOT NULL,
+  `name` text NOT NULL,
+  `quantity_in_stock` int NOT NULL DEFAULT '0'
+);
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `quantity_in_stock`) VALUES
+(1, 'Burger', 20),
+(2, 'Pizza', 30),
+(3, 'Pasta', 50),
+(4, 'Fries', 100),
+(5, 'Cake', 5),
+(6, 'Chicken Wings', 30);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `invoice`
+--
+DROP TABLE IF EXISTS `invoice`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`tahsin`@`%` SQL SECURITY DEFINER VIEW `invoice`  AS SELECT `oi`.`id` AS `id`, `c`.`first_name` AS `first_name`, `c`.`last_name` AS `last_name`, `p`.`name` AS `product`, `oi`.`quantity` AS `quantity`, `oi`.`unit_price` AS `unit_price`, (`oi`.`quantity` * `oi`.`unit_price`) AS `total_price`, `o`.`date` AS `date` FROM (((`order_items` `oi` join `orders` `o` on((`oi`.`order_id` = `o`.`id`))) join `products` `p` on((`oi`.`product_id` = `p`.`id`))) join `customers` `c` on((`o`.`customer_id` = `c`.`id`)))  ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `payment_invoice`
+--
+DROP TABLE IF EXISTS `payment_invoice`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`tahsin`@`%` SQL SECURITY DEFINER VIEW `payment_invoice`  AS SELECT `o`.`customer_id` AS `customer_id`, `c`.`first_name` AS `first_name`, `c`.`last_name` AS `last_name`, sum((`oi`.`quantity` * `oi`.`unit_price`)) AS `total_price` FROM (((`order_items` `oi` join `orders` `o` on((`oi`.`order_id` = `o`.`id`))) join `products` `p` on((`oi`.`product_id` = `p`.`id`))) join `customers` `c` on((`o`.`customer_id` = `c`.`id`))) GROUP BY `c`.`id``id`  ;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `customer_id` (`customer_id`);
+
+--
+-- Indexes for table `order_items`
+--
+ALTER TABLE `order_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `order_id` (`order_id`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `order_items`
+--
+ALTER TABLE `order_items`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`);
+
+--
+-- Constraints for table `order_items`
+--
+ALTER TABLE `order_items`
+  ADD CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2022-02-22 10:42:21

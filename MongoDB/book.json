@@ -1,0 +1,21 @@
+[
+  {
+    "_id": {
+      "$oid": "62b31c3866c0c2096828b4bf"
+    },
+    "book": "Python"
+  },
+  {
+    "_id": {
+      "$oid": "62b31e7b85eb0553c71269a5"
+    },
+    "name": "Tahsin"
+  }
+]
+db.createUser(
+  {
+    user: "moshh",
+    pwd: "123",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "ReadWriteAnyDatabase" ]
+  }
+)

@@ -1,0 +1,44 @@
+[
+{"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"resturant"},
+{"type":"table","name":"customers","database":"resturant","data":
+[
+{"id":"1","first_name":"Tahsin","last_name":"Ayman","points":"1000"},
+{"id":"2","first_name":"Touhida","last_name":"Akter","points":"2000"},
+{"id":"3","first_name":"Rasheed","last_name":"karim","points":"3000"},
+{"id":"4","first_name":"Tasmiah","last_name":"Tabassum","points":"4000"},
+{"id":"5","first_name":"Abdullah","last_name":"Al Adib","points":"0"},
+{"id":"6","first_name":"Roushon","last_name":"Ara","points":"5000"}
+]
+}
+,{"type":"table","name":"orders","database":"resturant","data":
+[
+{"id":"1","customer_id":"1","date":"2022-07-20"},
+{"id":"2","customer_id":"1","date":"2022-07-20"},
+{"id":"3","customer_id":"2","date":"2024-07-11"},
+{"id":"4","customer_id":"3","date":"2022-07-20"},
+{"id":"5","customer_id":"4","date":"2022-07-15"},
+{"id":"6","customer_id":"5","date":"2022-07-07"}
+]
+}
+,{"type":"table","name":"order_items","database":"resturant","data":
+[
+{"id":"3","product_id":"1","order_id":"1","quantity":"5","unit_price":"1000"},
+{"id":"4","product_id":"2","order_id":"1","quantity":"2","unit_price":"200"},
+{"id":"5","product_id":"3","order_id":"4","quantity":"3","unit_price":"5000"},
+{"id":"6","product_id":"5","order_id":"4","quantity":"6","unit_price":"6000"},
+{"id":"7","product_id":"6","order_id":"4","quantity":"7","unit_price":"200"},
+{"id":"8","product_id":"3","order_id":"2","quantity":"2","unit_price":"100"}
+]
+}
+,{"type":"table","name":"products","database":"resturant","data":
+[
+{"id":"1","name":"Burger","quantity_in_stock":"20"},
+{"id":"2","name":"Pizza","quantity_in_stock":"30"},
+{"id":"3","name":"Pasta","quantity_in_stock":"50"},
+{"id":"4","name":"Fries","quantity_in_stock":"100"},
+{"id":"5","name":"Cake","quantity_in_stock":"5"},
+{"id":"6","name":"Chicken Wings","quantity_in_stock":"30"}
+]
+}
+]

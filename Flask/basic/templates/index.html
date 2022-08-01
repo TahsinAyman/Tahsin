@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block body %}
+    <div class="container">
+        {% block header %}
+            {{ super() }}
+        {% endblock header %}
+        {% block main %}
+            <div class="row">
+                <div class="col-2">
+                    <div id="sidenav" style="top: 44px;">
+                        <div id="leftmenuinner" style="padding-top: 44px;">
+                            <div id="leftmenuinnerinner">
+                                <!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+                                <h2 class="left"><span class="left_h2">Icons</span> Tutorial</h2>
+                                <a target="_top" href="default.asp">Icons HOME</a>
+                                <a target="_top" href="icons_reference.asp">Icons Reference</a>
+                                <br>
+                                <h2 class="left"><span class="left_h2">Font Awesome 5</span></h2>
+                                <a target="_top" href="fontawesome5_intro.asp">Font Awesome 5 Intro</a>
+                                <a target="_top" href="fontawesome5_icons_accessibility.asp">Icons Accessibility</a>
+                                <a target="_top" href="fontawesome5_icons_alert.asp">Icons Alert</a>
+                                <a target="_top" href="fontawesome5_icons_animals.asp">Icons Animals</a>
+                                <a target="_top" href="fontawesome5_icons_arrows.asp">Icons Arrows</a>
+                                <a target="_top" href="fontawesome5_icons_audio_video.asp">Icons Audio &amp; Video</a>
+                                <a target="_top" href="fontawesome5_icons_automotive.asp">Icons Automotive</a>
+                                <a target="_top" href="fontawesome5_icons_autumn.asp">Icons Autumn</a>
+                                <a target="_top" href="fontawesome5_icons_beverage.asp">Icons Beverage</a>
+                                <a target="_top" href="fontawesome5_icons_brands.asp">Icons Brands</a>
+                                <a target="_top" href="fontawesome5_icons_buildings.asp">Icons Buildings</a>
+                                <a target="_top" href="fontawesome5_icons_business.asp">Icons Business</a>
+                                <a target="_top" href="fontawesome5_icons_camping.asp">Icons Camping</a>
+                                <a target="_top" href="fontawesome5_icons_charity.asp">Icons Charity</a>
+                                <a target="_top" href="fontawesome5_icons_chat.asp">Icons Chat</a>
+                                <a target="_top" href="fontawesome5_icons_chess.asp">Icons Chess</a>
+                                <a target="_top" href="fontawesome5_icons_childhood.asp">Icons Childhood</a>
+                                <a target="_top" href="fontawesome5_icons_clothing.asp">Icons Clothing</a>
+                                <a target="_top" href="fontawesome5_icons_code.asp" class="active">Icons Code</a>
+                                <a target="_top" href="fontawesome5_icons_communication.asp">Icons Communication</a>
+                                <a target="_top" href="fontawesome5_icons_computers.asp">Icons Computers</a>
+                                <a target="_top" href="fontawesome5_icons_construction.asp">Icons Construction</a>
+                                <a target="_top" href="fontawesome5_icons_currency.asp">Icons Currency</a>
+                                <a target="_top" href="fontawesome5_icons_datetime.asp">Icons Date &amp; Time</a>
+                                <a target="_top" href="fontawesome5_icons_design.asp">Icons Design</a>
+                                <a target="_top" href="fontawesome5_icons_editors.asp">Icons Editors</a>
+                                <a target="_top" href="fontawesome5_icons_education.asp">Icons Education</a>
+                                <a target="_top" href="fontawesome5_icons_emoji.asp">Icons Emoji</a>
+                                <a target="_top" href="fontawesome5_icons_energy.asp">Icons Energy</a>
+                                <a target="_top" href="fontawesome5_icons_files.asp">Icons Files</a>
+                                <a target="_top" href="fontawesome5_icons_finance.asp">Icons Finance</a>
+                                <a target="_top" href="fontawesome5_icons_fitness.asp">Icons Fitness</a>
+                                <a target="_top" href="fontawesome5_icons_food.asp">Icons Food</a>
+                                <a target="_top" href="fontawesome5_icons_fruits_vegetables.asp">Icons Fruits &amp; Vegetables</a>
+                                <a target="_top" href="fontawesome5_icons_games.asp">Icons Games</a>
+                                <a target="_top" href="fontawesome5_icons_genders.asp">Icons Genders</a>
+                                <a target="_top" href="fontawesome5_icons_halloween.asp">Icons Halloween</a>
+                                <a target="_top" href="fontawesome5_icons_hands.asp">Icons Hands</a>
+                                <a target="_top" href="fontawesome5_icons_health.asp">Icons Health</a>
+                                <a target="_top" href="fontawesome5_icons_holiday.asp">Icons Holiday</a>
+                                <a target="_top" href="fontawesome5_icons_hotel.asp">Icons Hotel</a>
+                                <a target="_top" href="fontawesome5_icons_household.asp">Icons Household</a>
+                                <a target="_top" href="fontawesome5_icons_images.asp">Icons Images</a>
+                                <a target="_top" href="fontawesome5_icons_interfaces.asp">Icons Interfaces</a>
+                                <a target="_top" href="fontawesome5_icons_logistics.asp">Icons Logistics</a>
+                                <a target="_top" href="fontawesome5_icons_maps.asp">Icons Maps</a>
+                                <a target="_top" href="fontawesome5_icons_maritime.asp">Icons Maritime</a>
+                                <a target="_top" href="fontawesome5_icons_marketing.asp">Icons Marketing</a>
+                                <a target="_top" href="fontawesome5_icons_mathematics.asp">Icons Mathematics</a>
+                                <a target="_top" href="fontawesome5_icons_medical.asp">Icons Medical</a>
+                                <a target="_top" href="fontawesome5_icons_moving.asp">Icons Moving</a>
+                                <a target="_top" href="fontawesome5_icons_music.asp">Icons Music</a>
+                                <a target="_top" href="fontawesome5_icons_objects.asp">Icons Objects</a>
+                                <a target="_top" href="fontawesome5_icons_payment_shopping.asp">Icons Payment &amp; Shopping</a>
+                                <a target="_top" href="fontawesome5_icons_pharmacy.asp">Icons Pharmacy</a>
+                                <a target="_top" href="fontawesome5_icons_political.asp">Icons Political</a>
+                                <a target="_top" href="fontawesome5_icons_religion.asp">Icons Religion</a>
+                                <a target="_top" href="fontawesome5_icons_science.asp">Icons Science</a>
+                                <a target="_top" href="fontawesome5_icons_science_fiction.asp">Icons Science Fiction</a>
+                                <a target="_top" href="fontawesome5_icons_security.asp">Icons Security</a>
+                                <a target="_top" href="fontawesome5_icons_shapes.asp">Icons Shapes</a>
+                                <a target="_top" href="fontawesome5_icons_shopping.asp">Icons Shopping</a>
+                                <a target="_top" href="fontawesome5_icons_social.asp">Icons Social</a>
+                                <a target="_top" href="fontawesome5_icons_spinners.asp">Icons Spinners</a>
+                                <a target="_top" href="fontawesome5_icons_sports.asp">Icons Sports</a>
+                                <a target="_top" href="fontawesome5_icons_spring.asp">Icons Spring</a>
+                                <a target="_top" href="fontawesome5_icons_status.asp">Icons Status</a>
+                                <a target="_top" href="fontawesome5_icons_summer.asp">Icons Summer</a>
+                                <a target="_top" href="fontawesome5_icons_tabletop_gaming.asp">Icons Tabletop Gaming</a>
+                                <a target="_top" href="fontawesome5_icons_toggle.asp">Icons Toggle</a>
+                                <a target="_top" href="fontawesome5_icons_travel.asp">Icons Travel</a>
+                                <a target="_top" href="fontawesome5_icons_users_people.asp">Icons Users &amp; People</a>
+                                <a target="_top" href="fontawesome5_icons_vehicles.asp">Icons Vehicles</a>
+                                <a target="_top" href="fontawesome5_icons_weather.asp">Icons Weather</a>
+                                <a target="_top" href="fontawesome5_icons_winter.asp">Icons Winter</a>
+                                <a target="_top" href="fontawesome5_icons_writing.asp">Icons Writing</a>
+                                <br>
+                                <h2 class="left"><span class="left_h2">Font Awesome 4</span></h2>
+                                <a target="_top" href="fontawesome_icons_intro.asp">Font Awesome Intro</a>
+                                <a target="_top" href="fontawesome_icons_brand.asp">Icons Brand</a>
+                                <a target="_top" href="fontawesome_icons_chart.asp">Icons Chart</a>
+                                <a target="_top" href="fontawesome_icons_currency.asp">Icons Currency</a>
+                                <a target="_top" href="fontawesome_icons_directional.asp">Icons Directional</a>
+                                <a target="_top" href="fontawesome_icons_filetype.asp">Icons File Type</a>
+                                <a target="_top" href="fontawesome_icons_form.asp">Icons Form</a>
+                                <a target="_top" href="fontawesome_icons_gender.asp">Icons Gender</a>
+                                <a target="_top" href="fontawesome_icons_hand.asp">Icons Hand</a>
+                                <a target="_top" href="fontawesome_icons_medical.asp">Icons Medical</a>
+                                <a target="_top" href="fontawesome_icons_payment.asp">Icons Payment</a>
+                                <a target="_top" href="fontawesome_icons_spinner.asp">Icons Spinner</a>
+                                <a target="_top" href="fontawesome_icons_text.asp">Icons Text</a>
+                                <a target="_top" href="fontawesome_icons_transportation.asp">Icons Transportation</a>
+                                <a target="_top" href="fontawesome_icons_video.asp">Icons Video</a>
+                                <a target="_top" href="fontawesome_icons_webapp.asp">Icons Web Application</a>
+                                <br>
+                                <h2 class="left"><span class="left_h2">Bootstrap</span></h2>
+                                <a target="_top" href="bootstrap_icons_glyphicons.asp">Icons BS Glyphicons</a>
+                                <br>
+                                <h2 class="left"><span class="left_h2">Google</span></h2>
+                                <a target="_top" href="google_icons_intro.asp">Google Icons Intro</a>
+                                <a target="_top" href="google_icons_action.asp">Icons Action</a>
+                                <a target="_top" href="google_icons_alert.asp">Icons Alert</a>
+                                <a target="_top" href="google_icons_av.asp">Icons AV</a>
+                                <a target="_top" href="google_icons_communication.asp">Icons Communication</a>
+                                <a target="_top" href="google_icons_content.asp">Icons Content</a>
+                                <a target="_top" href="google_icons_device.asp">Icons Device</a>
+                                <a target="_top" href="google_icons_editor.asp">Icons Editor</a>
+                                <a target="_top" href="google_icons_file.asp">Icons File</a>
+                                <a target="_top" href="google_icons_hardware.asp">Icons Hardware</a>
+                                <a target="_top" href="google_icons_image.asp">Icons Image</a>
+                                <a target="_top" href="google_icons_maps.asp">Icons Maps</a>
+                                <a target="_top" href="google_icons_navigation.asp">Icons Navigation</a>
+                                <a target="_top" href="google_icons_notification.asp">Icons Notification</a>
+                                <a target="_top" href="google_icons_places.asp">Icons Places</a>
+                                <a target="_top" href="google_icons_social.asp">Icons Social</a>
+                                <a target="_top" href="google_icons_toggle.asp">Icons Toggle</a>
+                                <br>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <img style="width:100%" src="static\\css\\image.png">
+                </div>
+            </div>
+            {{ super() }}
+        {% endblock main %}
+        {% block footer %}
+            {{ super() }}
+        {% endblock footer %}
+    </div>
+{% endblock body %}

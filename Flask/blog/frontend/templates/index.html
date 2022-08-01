@@ -1,0 +1,118 @@
+<html>
+
+<body>
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" alt="x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS99uVNckIreO6RnCBfecg7NEkmYgxYDMvL6ZJH6rIrB3TPZGCnTgu5G8ydv1pyjDXeCkI&usqp=CAU">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style type="text/css">
+        i {
+            color: #f00;
+        }
+
+        .dropbtn {
+            padding: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    </head>
+
+    <body>
+        {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-info" role="alert">
+            <p class="alert-link">{{ message }}</a>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <div class="dropdown">
+            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='fab fa-blogger'></i> Blog
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/create/"><i class='far fa-comment'></i> Create A Blog</a></li>
+                <li><a class="dropdown-item" href="/delete/"><i class='fas fa-comment-slash'></i> Delete A Blog</a></li>
+                <li><a class="dropdown-item" href="/update/"><i class='fas fa-comment-dots'></i> Update A Blog</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='fas fa-id-badge'></i> Account
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                    <p class="dropdown-item">
+                        <i class='fas fa-user-alt'></i> Welcome, {{ current_user }}
+                    </p>
+                </li>
+                <li><a class="dropdown-item" href="/users/"><i class='fas fa-user-friends'></i> Users</a></li>
+                <li><a class="dropdown-item" href="/logout/"><i class='fas fa-power-off'></i> Logout</a></li>
+                <li><a class="dropdown-item" href="/delete_account/"><i class='fas fa-user-times'></i> Delete
+                        Account</a></li>
+                <li><a class="dropdown-item" href="/update_password/"><i class='fas fa-key'></i> Update Password</a>
+                </li>
+            </ul>
+        </div>
+        <section class="vh-100">
+            <div class="container h-100">
+                <div class="row d-flex">
+                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Blog</p>
+                        <form action="/blogs/" method="POST" class="mx-1 mx-md-4">
+                            <div class="input-group mb-4">
+                                <input type="text" class="form-control" placeholder="blog title"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                                    <i class="fas fa-search fa-lg me-3 fa-fw"></i> Search
+                                </button>
+                            </div>
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-ice-cream fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                    <a href="/create/">Create A Blog</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"></div>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/b08206f45e.js" crossorigin="anonymous"></script>
+    </body>
+
+</html>
